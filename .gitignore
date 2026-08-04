@@ -216,3 +216,33 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+────────────────────────────────────────────────────
+# Environment
+.env
+
+# Model weights (too large for GitHub)
+models/*.bin
+models/*.safetensors
+models/*.pt
+models/*.pth
+
+# Databases (generated at runtime)
+*.db
+chroma_db/
+
+# Datasets (download separately)
+data/*.csv
+data/*.json
+data/*.parquet
+
+# Training outputs
+outputs/
+runs/
+wandb/
+────────────────────────────────────────────────────
+
+Save and commit:
+git add .gitignore
+git commit -m "Update gitignore for ML project"
+git push origin main
