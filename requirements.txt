@@ -1,0 +1,39 @@
+# ── Core ML / NLP ─────────────────────────────────────────────────────────────
+torch>=2.2.0
+transformers>=4.40.0
+peft>=0.10.0
+trl>=0.8.0
+accelerate>=0.28.0
+bitsandbytes>=0.43.0
+datasets>=2.18.0
+sentence-transformers>=2.7.0
+scikit-learn>=1.4.0
+
+# ── Guardrail pipeline ─────────────────────────────────────────────────────────
+langgraph>=0.0.55
+langchain>=0.1.16
+langchain-community>=0.0.36
+
+# ── Memory ─────────────────────────────────────────────────────────────────────
+chromadb>=0.4.24
+
+# ── NLP / PII ──────────────────────────────────────────────────────────────────
+spacy>=3.7.0
+# After install run: python -m spacy download en_core_web_lg
+
+# ── LLM-as-judge (Task 1.1 only) ──────────────────────────────────────────────
+openai>=1.23.0
+
+# ── Data processing ────────────────────────────────────────────────────────────
+pandas>=2.2.0
+numpy>=1.26.0
+tqdm>=4.66.0
+python-dotenv>=1.0.0
+
+# ── Evaluation / statistics ────────────────────────────────────────────────────
+scipy>=1.13.0
+matplotlib>=3.8.0
+seaborn>=0.13.0
+
+# ── Testing ────────────────────────────────────────────────────────────────────
+pytest>=8.1.0
