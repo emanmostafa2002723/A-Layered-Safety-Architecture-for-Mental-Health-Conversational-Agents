@@ -1,0 +1,3 @@
+[submodule "wellbeing_agent"]
+	path = wellbeing_agent
+	url = https://github.com/devshafi/Wellbeing-Agent
