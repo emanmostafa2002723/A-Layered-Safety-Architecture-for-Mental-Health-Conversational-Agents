@@ -1,0 +1,29 @@
+﻿# Model files (large)
+models/
+*.bin
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+venv/
+env/
+.env
+
+# Data (optional - keep small JSONL files tracked, but raw data may be large)
+data/raw/
+data/external/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
