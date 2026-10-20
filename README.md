@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="nora/src/mental_health_pipeline/web_nora/assets/nora-logo.png" width="115" alt="NORA: a speech bubble, leaves and a small golden star">
+<img src="nora/src/mental_health_pipeline/web_nora/assets/nora-logo.png" width="150" alt="NORA: a sage tangle unwinding into a golden heart">
 
 # NORA
 

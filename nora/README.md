@@ -3,7 +3,7 @@
 # NORA
 ### A little room to be you.
 
-<img src="src/mental_health_pipeline/web_nora/assets/nora-logo.png" width="100" alt="NORA logo">
+<img src="src/mental_health_pipeline/web_nora/assets/nora-logo.png" width="150" alt="NORA: a sage tangle unwinding into a golden heart">
 
 **A mental-wellbeing companion with a layered safety architecture.**
 

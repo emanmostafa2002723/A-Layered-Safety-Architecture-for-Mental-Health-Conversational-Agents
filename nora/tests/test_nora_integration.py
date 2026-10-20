@@ -63,12 +63,22 @@ def test_connected_static_assets_account_api_and_checked_reply(store):
         assert '/nora/connection.js' in home.text
         assert "script-src 'self';" in home.headers['content-security-policy']
         assert '<script>' not in home.text
+        assert 'rel="icon" type="image/png" sizes="64x64" href="/nora/assets/nora-favicon.png"' in home.text
+        assert 'rel="apple-touch-icon" href="/nora/assets/nora-logo.png"' in home.text
         assert home.headers['cache-control'] == 'no-store'
         assert client.get('/nora/assets/nora-logo.png').headers['cache-control'] == 'public, max-age=3600'
         assert client.get('/nora/connection.js').headers['cache-control'] == 'no-store'
         for asset in ('app.js', 'connection.js', 'styles.css', 'assets/nora-logo.png',
-                      'assets/nora-avatars.png', 'assets/video-sleep.jpg'):
+                      'assets/nora-avatars.png', 'assets/video-sleep.jpg', 'assets/nora-favicon.png'):
             assert client.get('/nora/' + asset).status_code == 200
+        favicon = client.get('/nora/assets/nora-favicon.png')
+        assert favicon.headers['content-type'] == 'image/png'
+        assert favicon.headers['cache-control'] == 'public, max-age=3600'
+        # PNG signature/IHDR: a genuine RGBA PNG, not a JPEG renamed .png.
+        assert favicon.content[:8] == b'\x89PNG\r\n\x1a\n'
+        assert int.from_bytes(favicon.content[16:20], 'big') == 64
+        assert int.from_bytes(favicon.content[20:24], 'big') == 64
+        assert favicon.content[25] == 6
         assert client.get('/nora/../../.env.qwen-server').status_code == 404
         assert client.get('/accounts/interface-preferences').status_code == 401
         client.headers.update({'X-Memory-Client': '1'})
