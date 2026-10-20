@@ -1,0 +1,37 @@
+# Local/private research material is not a submission artifact.
+.env*
+!*.env.example
+*.key
+*.pem
+*.memory-key
+*.sqlite*
+*.db
+*.db-*
+.venv*/
+.runtime*/
+**/data/local/
+**/data/private/
+**/data/raw/
+**/checkpoints/
+**/model_cache/
+**/private_exports/
+# Review cards, source and hashes belong in Git; learned artifacts do not.
+*.safetensors
+*.pt
+*.pth
+*.ckpt
+*.bin
+*.gguf
+*.onnx
+*.h5
+*.hdf5
+*.faiss
+*.npy
+*.npz
+*.pkl
+*.pickle
+*.zip
+*.tar
+*.tar.gz
+*.7z
+*.log

@@ -1,0 +1,5 @@
+# Portable source/docs; preserve dataset bytes for reproducible file hashes.
+* text=auto eol=lf
+**/data/** -text
+**/data/**/README.md text eol=lf
+**/data/**/DATASET_CARD.md text eol=lf

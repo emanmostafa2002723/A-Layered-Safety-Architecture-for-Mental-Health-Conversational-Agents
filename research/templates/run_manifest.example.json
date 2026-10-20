@@ -1,0 +1,53 @@
+{
+  "template_only": true,
+  "component": null,
+  "run_id": null,
+  "owner": null,
+  "started_at": null,
+  "completed_at": null,
+  "status": "not_run",
+  "code": {
+    "repository": null,
+    "commit": null,
+    "working_directory": null,
+    "command": null
+  },
+  "inputs": {
+    "dataset_manifests": [],
+    "model_revisions": [],
+    "checkpoint_sha256": null,
+    "calibration_sha256": null,
+    "prompt_sha256": null,
+    "config_paths": []
+  },
+  "environment": {
+    "os": null,
+    "python": null,
+    "dependency_snapshot": null,
+    "gpu": null,
+    "cpu": null,
+    "ram_gib": null,
+    "device_allocation": null
+  },
+  "settings": {
+    "seed": null,
+    "training_parameters": null,
+    "inference_parameters": null,
+    "thresholds": null
+  },
+  "evaluation": {
+    "split": null,
+    "samples": null,
+    "warmup": null,
+    "repetitions": null,
+    "concurrency": null,
+    "failures": null,
+    "metrics_file": null,
+    "latency_file": null
+  },
+  "decision": {
+    "outcome": "not_evaluated",
+    "rationale": null,
+    "runtime_integration_commit": null
+  }
+}
