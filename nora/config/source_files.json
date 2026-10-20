@@ -474,8 +474,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 12191,
-      "sha256": "080dcc7b2d14cfdf8186562cc71203609d1d783baf509c921368fc67d1f48e9a"
+      "bytes": 12864,
+      "sha256": "4895b9fbeabe5a7fea0ea89925b7df6f91ed11f8407dee2d9b2e8d4c9533570c"
     },
     {
       "path": "requirements-gradio.txt",
