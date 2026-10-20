@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en" data-text="default" data-motion="auto">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f7f6f0"><meta name="description" content="NORA, a gentle space for guarded conversation and small moments of wellbeing.">
+<title>NORA · A little room to be you</title>
+<link rel="stylesheet" href="/nora/styles.css"><script defer src="/nora/app.js"></script><script defer src="/nora/connection.js"></script>
+</head>
+<body>
+<a href="#main" class="skip">Skip to content</a>
+<aside class="sidebar" aria-label="Main navigation">
+ <a href="#home" class="brand" data-page="home"><img src="/nora/assets/nora-logo.png" alt=""><span><strong>NORA<span>.</span></strong><small>A little room to be you</small></span></a>
+ <button class="button primary new-chat" data-action="new-chat"><span data-icon="plus"></span> New conversation</button>
+ <nav id="desktop-nav"></nav>
+ <div class="sidebar-bottom"><div class="side-thought"><span data-icon="leaf"></span><p>Small moments.<br>A little more room.</p></div><button class="help-side" data-action="help"><span data-icon="life"></span> Find human support <span>↗</span></button><button class="profile" data-action="account"><span class="profile-avatar" id="sidebar-avatar"></span><span><strong id="sidebar-name">Your space</strong><small id="sidebar-account">Make yourself comfortable</small></span><span data-icon="chevron"></span></button></div>
+</aside>
+<div class="app-body"><header class="topbar"><div class="breadcrumb"><span class="header-leaf" data-icon="sprout"></span><span id="page-label">Your little clearing</span><span class="preview-tag">Private test</span></div><div class="header-actions"><button class="help-top" data-action="help"><span data-icon="life"></span><span>Get urgent help</span></button><button class="icon-button" data-action="theme" aria-label="Switch day or evening theme"><span data-icon="moon"></span></button><button class="top-avatar" data-action="account" aria-label="Your profile" id="top-avatar"></button></div></header><main id="main" tabindex="-1"></main><footer class="preview-footer">NORA · AI companion · You control your memory and saved conversations</footer></div>
+<nav class="bottom-nav" aria-label="Mobile navigation" id="mobile-nav"></nav>
+<dialog id="modal" aria-labelledby="modal-title"><div id="modal-content"></div></dialog>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body></html>

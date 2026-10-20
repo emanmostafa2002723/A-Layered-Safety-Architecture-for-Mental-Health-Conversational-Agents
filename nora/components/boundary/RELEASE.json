@@ -1,0 +1,17 @@
+{
+  "schema": "boundary-final-submission-package-1.0",
+  "entrypoint": "boundary.conservative",
+  "launcher": "Run-Boundary.ps1",
+  "checkpoint": "model",
+  "model_sha256": "328de3a047d6c144d8a13f2cdf77e7abba6aeeb58b0619e16c4bb37830054023",
+  "confidence": "calibration/candidate.json",
+  "confidence_sha256": "22ab59d26f5386f86b6446795e41c47e44df6c5125ca2a7d0fa17656ca156e5e",
+  "guard_code_sha256": "0689b22be3d96a8e163f017770ca22b9c3079d6dd20d993d665fc425250541eb",
+  "inherited_clarification_code_sha256": "9f1c6988cf48e1ba55f6b3f0117e34f0da9fce504fa1ef5893268c48816891e7",
+  "profile_verification": "evidence/profile_verification.json",
+  "new_retrained_model_promoted": false,
+  "previous_model_weights_and_calibration_preserved": true,
+  "full_chatbot_pipeline_modified": false,
+  "clinical_deployment_ready": false,
+  "source_project": "../boundary-classifier-rebuild"
+}

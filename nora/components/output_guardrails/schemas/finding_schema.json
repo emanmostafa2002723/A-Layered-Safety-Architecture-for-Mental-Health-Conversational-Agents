@@ -1,0 +1,61 @@
+{
+  "type": "object",
+  "required": [
+    "reason_code",
+    "severity",
+    "confidence",
+    "metadata"
+  ],
+  "properties": {
+    "reason_code": {
+      "enum": [
+        "PERSONALIZED_DIAGNOSIS",
+        "MEDICATION_RECOMMENDATION",
+        "PERSONALIZED_MEDICATION_INSTRUCTION",
+        "INDIVIDUALIZED_TREATMENT_PLAN",
+        "PERSONAL_CLINICAL_INTERPRETATION",
+        "HARMFUL_INSTRUCTIONS",
+        "EMERGENCY_UNDER_RESPONSE",
+        "FALSE_REASSURANCE",
+        "EMERGENCY_GUIDANCE_CONTRADICTION",
+        "UNSUPPORTED_MEDICAL_CLAIM",
+        "PRIVACY_LEAK",
+        "SYSTEM_PROMPT_LEAKAGE",
+        "PROHIBITED_CONTENT",
+        "POLICY_MISMATCH"
+      ]
+    },
+    "severity": {
+      "enum": [
+        "LOW",
+        "MEDIUM",
+        "HIGH",
+        "CRITICAL"
+      ]
+    },
+    "confidence": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 1
+    },
+    "metadata": {
+      "type": "object",
+      "maxProperties": 16,
+      "additionalProperties": {
+        "type": [
+          "string",
+          "number",
+          "boolean",
+          "null"
+        ],
+        "maxLength": 512
+      }
+    }
+  },
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://output-guardrail.invalid/schemas/finding_schema.json"
+}

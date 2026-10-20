@@ -1,0 +1,81 @@
+{
+  "schema_version": "emergency-resources/1.0",
+  "catalog_version": "2026.10.02",
+  "reviewed_on": "2026-10-02",
+  "approved_for_production": false,
+  "approval_reference": "pending_project_owner_clinical_legal_review",
+  "worldwide": {
+    "immediate_danger_instruction": "If you or someone else may be in immediate danger, contact local emergency services or go to the nearest emergency department now. If there is no immediate danger but urgent support is needed, contact a local crisis line, health worker, or trusted person.",
+    "resources": [
+      {
+        "id": "worldwide.findahelpline",
+        "name": "Find A Helpline",
+        "contact": "https://findahelpline.com/",
+        "action": "Visit https://findahelpline.com/ and select your country to find a verified local emotional-support or crisis service.",
+        "channels": ["web"],
+        "source_url": "https://findahelpline.com/about",
+        "reviewed_on": "2026-10-02",
+        "approved_for_production": false,
+        "approval_reference": "pending_project_owner_clinical_legal_review"
+      }
+    ]
+  },
+  "countries": {
+    "CA": {
+      "aliases": ["ca", "can", "canada"],
+      "immediate_danger_instruction": "If you or someone else may be in immediate danger in Canada, call 9-1-1 or go to the nearest emergency department now.",
+      "resources": [
+        {
+          "id": "ca.911",
+          "name": "Canadian emergency services",
+          "contact": "9-1-1",
+          "action": "Call 9-1-1 if you or someone else is in immediate danger in Canada.",
+          "channels": ["call"],
+          "source_url": "https://www.canada.ca/en/public-health/services/suicide-prevention/warning-signs.html",
+          "reviewed_on": "2026-10-02",
+          "approved_for_production": false,
+          "approval_reference": "pending_project_owner_clinical_legal_review"
+        },
+        {
+          "id": "ca.988",
+          "name": "Canada 9-8-8 Suicide Crisis Helpline",
+          "contact": "9-8-8",
+          "action": "Call or text 9-8-8 for 24/7 suicide-crisis support in Canada.",
+          "channels": ["call", "text"],
+          "source_url": "https://www.canada.ca/en/public-health/services/suicide-prevention/warning-signs.html",
+          "reviewed_on": "2026-10-02",
+          "approved_for_production": false,
+          "approval_reference": "pending_project_owner_clinical_legal_review"
+        }
+      ]
+    },
+    "US": {
+      "aliases": ["us", "usa", "united states", "united states of america"],
+      "immediate_danger_instruction": "If you or someone else may be in immediate danger in the United States, call 911 or go to the nearest emergency department now.",
+      "resources": [
+        {
+          "id": "us.911",
+          "name": "United States emergency services",
+          "contact": "911",
+          "action": "Call 911 if you or someone else is in immediate danger in the United States.",
+          "channels": ["call"],
+          "source_url": "https://www.911.gov/",
+          "reviewed_on": "2026-10-02",
+          "approved_for_production": false,
+          "approval_reference": "pending_project_owner_clinical_legal_review"
+        },
+        {
+          "id": "us.988",
+          "name": "988 Suicide & Crisis Lifeline",
+          "contact": "988",
+          "action": "Call or text 988 for 24/7 crisis support in the United States, or use chat at https://988lifeline.org/.",
+          "channels": ["call", "text", "web chat"],
+          "source_url": "https://www.samhsa.gov/mental-health/988/faqs",
+          "reviewed_on": "2026-10-02",
+          "approved_for_production": false,
+          "approval_reference": "pending_project_owner_clinical_legal_review"
+        }
+      ]
+    }
+  }
+}

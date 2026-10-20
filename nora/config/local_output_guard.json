@@ -1,0 +1,12 @@
+{
+  "schema_version": "local-output-config/1.0",
+  "model": "qwen3:4b",
+  "api_url": "http://127.0.0.1:11434/api/chat",
+  "num_gpu": 0,
+  "timeout_seconds": 90,
+  "context_tokens": 12288,
+  "max_new_tokens": 384,
+  "clinical_deployment_ready": false,
+  "mode": "local_development",
+  "evidence_policy": "retrieved_text_entailment_not_clinical_source_approval"
+}

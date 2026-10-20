@@ -1,0 +1,57 @@
+{
+  "type": "object",
+  "required": [
+    "checker",
+    "status",
+    "violations",
+    "details"
+  ],
+  "properties": {
+    "checker": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 256
+    },
+    "status": {
+      "enum": [
+        "OK",
+        "ERROR",
+        "TIMEOUT",
+        "INVALID_INPUT",
+        "NOT_APPLICABLE"
+      ]
+    },
+    "violations": {
+      "type": "array",
+      "maxItems": 128,
+      "items": {
+        "$ref": "finding_schema.json"
+      }
+    },
+    "details": {
+      "type": "object",
+      "maxProperties": 16
+    }
+  },
+  "additionalProperties": false,
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "NOT_APPLICABLE"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "violations": {
+            "maxItems": 0
+          }
+        }
+      }
+    }
+  ],
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://output-guardrail.invalid/schemas/checker_result_schema.json"
+}

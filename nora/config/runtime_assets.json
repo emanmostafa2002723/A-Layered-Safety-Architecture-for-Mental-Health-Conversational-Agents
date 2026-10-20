@@ -1,0 +1,296 @@
+{
+  "schema_version": "nora-runtime-assets/1.0",
+  "clinical_deployment_ready": false,
+  "groups": {
+    "boundary": {
+      "target_prefix": "components/boundary/model/",
+      "files": [
+        {
+          "name": "calibration.json",
+          "bytes": 7819,
+          "sha256": "840cb975fe903bb971c6e06148947f9fbff94afcdb4be667b0ee6d468a42e2a2"
+        },
+        {
+          "name": "config.json",
+          "bytes": 1306,
+          "sha256": "ced956d70f04349e6874e86e84e6a9c30d03ba03a985f22f89d361d2a6df35fd"
+        },
+        {
+          "name": "model.safetensors",
+          "bytes": 737725432,
+          "sha256": "328de3a047d6c144d8a13f2cdf77e7abba6aeeb58b0619e16c4bb37830054023"
+        },
+        {
+          "name": "tokenizer.json",
+          "bytes": 8339876,
+          "sha256": "e9ddd853a4a31023721c993458663f2019e3154a05dacf0d2b3c217e53d9bdc8"
+        },
+        {
+          "name": "tokenizer_config.json",
+          "bytes": 592,
+          "sha256": "9a494e48db9ec5635f17229b6fed23a0c392584e1fe4e7467a7c7a1a954012b1"
+        },
+        {
+          "name": "training_manifest.json",
+          "bytes": 8650,
+          "sha256": "438118bf1f50a7dac72c65b9a1213ccdddded0275e386e4737a1cbff55c00bd8"
+        }
+      ]
+    },
+    "crisis": {
+      "target_prefix": "components/crisis_fresh_epoch3/",
+      "files": [
+        {
+          "name": "calibration.json",
+          "bytes": 584,
+          "sha256": "969101aee690025edfec12344b5f5980c3fb66a1b863ec50d87e4c4de9d7493d"
+        },
+        {
+          "name": "epoch_3.pt",
+          "bytes": 367739627,
+          "sha256": "82bb3befdebd3311833a14b299a921cbd120764f6b9dd75766fd61112c61bf68"
+        },
+        {
+          "name": "tokenizer/config.json",
+          "bytes": 893,
+          "sha256": "a1494ff0e486649bcb8ed59d322c1374a1d103fd278684182e0e1c3bcdcd6e74"
+        },
+        {
+          "name": "tokenizer/tokenizer.json",
+          "bytes": 8339974,
+          "sha256": "a29e21faec7433ee508590c7bee5dc869fddb335aacf11d53be766cf0fd81294"
+        },
+        {
+          "name": "tokenizer/tokenizer_config.json",
+          "bytes": 672,
+          "sha256": "8838a346b2a3c56bd3655bf12409d1836300fabd8fe21d587924e6f0da5d00ae"
+        }
+      ]
+    },
+    "all-MiniLM-L6-v2": {
+      "target_prefix": "models/all-MiniLM-L6-v2/",
+      "files": [
+        {
+          "name": "1_Pooling/config.json",
+          "bytes": 190,
+          "sha256": "4be450dde3b0273bb9787637cfbd28fe04a7ba6ab9d36ac48e92b11e350ffc23"
+        },
+        {
+          "name": "config.json",
+          "bytes": 612,
+          "sha256": "953f9c0d463486b10a6871cc2fd59f223b2c70184f49815e7efbcab5d8908b41"
+        },
+        {
+          "name": "config_sentence_transformers.json",
+          "bytes": 116,
+          "sha256": "061ca9d39661d6c6d6de5ba27f79a1cd5770ea247f8d46412a68a498dc5ac9f3"
+        },
+        {
+          "name": "model.safetensors",
+          "bytes": 90868376,
+          "sha256": "53aa51172d142c89d9012cce15ae4d6cc0ca6895895114379cacb4fab128d9db"
+        },
+        {
+          "name": "modules.json",
+          "bytes": 349,
+          "sha256": "84e40c8e006c9b1d6c122e02cba9b02458120b5fb0c87b746c41e0207cf642cf"
+        },
+        {
+          "name": "sentence_bert_config.json",
+          "bytes": 53,
+          "sha256": "fc1993fde0a95c24ec6c022539d41cf6e2f7c9721e5415d6fb6897472a9cd4b7"
+        },
+        {
+          "name": "special_tokens_map.json",
+          "bytes": 112,
+          "sha256": "303df45a03609e4ead04bc3dc1536d0ab19b5358db685b6f3da123d05ec200e3"
+        },
+        {
+          "name": "tokenizer.json",
+          "bytes": 466247,
+          "sha256": "be50c3628f2bf5bb5e3a7f17b1f74611b2561a3a27eeab05e5aa30f411572037"
+        },
+        {
+          "name": "tokenizer_config.json",
+          "bytes": 350,
+          "sha256": "acb92769e8195aabd29b7b2137a9e6d6e25c476a4f15aa4355c233426c61576b"
+        },
+        {
+          "name": "vocab.txt",
+          "bytes": 231508,
+          "sha256": "07eced375cec144d27c900241f3e339478dec958f92fddbc551f295c992038a3"
+        }
+      ]
+    },
+    "bge-reranker-large": {
+      "target_prefix": "models/bge-reranker-large/",
+      "files": [
+        {
+          "name": "config.json",
+          "bytes": 801,
+          "sha256": "25dda0319f57e9de243c32eb7ecefa0768271afac6b5d8a94ba7f779198ab102"
+        },
+        {
+          "name": "model.safetensors",
+          "bytes": 2239618772,
+          "sha256": "c5ae4e262c60ed2fb507ec587358285377ec36ee0a2e6da029f0534272b06d36"
+        },
+        {
+          "name": "sentencepiece.bpe.model",
+          "bytes": 5069051,
+          "sha256": "cfc8146abe2a0488e9e2a0c56de7952f7c11ab059eca145a0a727afce0db2865"
+        },
+        {
+          "name": "special_tokens_map.json",
+          "bytes": 279,
+          "sha256": "d5469a60db23249c7f8945013d78df30b44b6bf686c6bb4740f4223f77b1b535"
+        },
+        {
+          "name": "tokenizer.json",
+          "bytes": 17098107,
+          "sha256": "9eb652ac4e40cc093272bbbe0f55d521cf67570060227109b5cdc20945a4489e"
+        },
+        {
+          "name": "tokenizer_config.json",
+          "bytes": 443,
+          "sha256": "a1d6bc8734a6f635dc158508bef000f8e2e5a759c7d92f984b2c86e5ff53425b"
+        }
+      ]
+    },
+    "mistral-7b-instruct-v0.3": {
+      "target_prefix": "models/mistral-7b-instruct-v0.3/",
+      "files": [
+        {
+          "name": "config.json",
+          "bytes": 601,
+          "sha256": "affafc6478ec0fd07a32f0ca57aa2fc57743f4d17d6730f86a96ac24d1507f99"
+        },
+        {
+          "name": "generation_config.json",
+          "bytes": 116,
+          "sha256": "b4669f1b8f4185324bd9b12a69e85a1ad2289bc48111ef739cfaaea3bba6b0a9"
+        },
+        {
+          "name": "model-00001-of-00003.safetensors",
+          "bytes": 4949453792,
+          "sha256": "ce6fb6f6f4d0183f4813cbf4ece24109da629a08d4210da46f77e1d8b0bd5c19"
+        },
+        {
+          "name": "model-00002-of-00003.safetensors",
+          "bytes": 4999819336,
+          "sha256": "8c0e72f148366b6a3709e002a98706a33d31aec8515090c856c95b2044f92ae0"
+        },
+        {
+          "name": "model-00003-of-00003.safetensors",
+          "bytes": 4546807800,
+          "sha256": "905dd405363e43d95779c1c1155a2dbfd36155914ae95dbd934e12e490cfb4ca"
+        },
+        {
+          "name": "model.safetensors.index.json",
+          "bytes": 23950,
+          "sha256": "e489ba553b87cde188d921b1a8283c2e0b9d33d635b88147d96ff0fcd6250016"
+        },
+        {
+          "name": "params.json",
+          "bytes": 202,
+          "sha256": "8a64b8657de37af1f828eef1517dc186247938d66e7fea2c78c31d5b9071efe6"
+        },
+        {
+          "name": "special_tokens_map.json",
+          "bytes": 414,
+          "sha256": "6fa06efa2785e450051989a6f8fb4416b10149ded485ddd3f127a40734f5cfd0"
+        },
+        {
+          "name": "tokenizer.json",
+          "bytes": 1961548,
+          "sha256": "e553af6fff7d7ad76e830608b218c5c0b0822998d5a1a96099a74cd3c1cb1a49"
+        },
+        {
+          "name": "tokenizer.model",
+          "bytes": 587404,
+          "sha256": "37f00374dea48658ee8f5d0f21895b9bc55cb0103939607c8185bfd1c6ca1f89"
+        },
+        {
+          "name": "tokenizer.model.v3",
+          "bytes": 587404,
+          "sha256": "37f00374dea48658ee8f5d0f21895b9bc55cb0103939607c8185bfd1c6ca1f89"
+        },
+        {
+          "name": "tokenizer_config.json",
+          "bytes": 140874,
+          "sha256": "0533dec9cfe319163801b6618d0f3ec9cfa126b6288e3df5deca6e32acb09cd2"
+        }
+      ]
+    },
+    "phoenix_v6_safe_lora": {
+      "target_prefix": "models/phoenix_v6_safe_lora/",
+      "files": [
+        {
+          "name": "adapter_config.json",
+          "bytes": 1113,
+          "sha256": "a3c8568ade27f7708ff18eba40af140a5bb6992bf5d096f302be719fb2e2f00b"
+        },
+        {
+          "name": "adapter_model.safetensors",
+          "bytes": 27280152,
+          "sha256": "7742bb3438fb53c34862d88c031d2f8e5da2f0ceaff52c693804d570a9769da0"
+        },
+        {
+          "name": "chat_template.jinja",
+          "bytes": 3959,
+          "sha256": "e16746b40344d6c5b5265988e0328a0bf7277be86f1c335156eae07e29c82826"
+        },
+        {
+          "name": "tokenizer.json",
+          "bytes": 3671968,
+          "sha256": "3e01771050ce4fba855c59ddb474c72ca1a3f2113a04727990155e3e47390764"
+        },
+        {
+          "name": "tokenizer_config.json",
+          "bytes": 462,
+          "sha256": "18422a1da6720d57683ec7acaa491ff4b04031c056ad386e5bcc0e6497d61001"
+        }
+      ]
+    },
+    "rag": {
+      "target_prefix": "rag_project/data/processed/",
+      "files": [
+        {
+          "name": "bm25_index.pkl",
+          "bytes": 8378930,
+          "sha256": "17673b2c0eedc653bb5a54ff6b0818903d7aa8937aac598e6da5486f2fb2ff72"
+        },
+        {
+          "name": "child_chunks.json",
+          "bytes": 13085268,
+          "sha256": "221d97301e7446c6056edeabd0b1d174d3861ba35b63535bf1cc672c0eb4577d"
+        },
+        {
+          "name": "chunk_stats.json",
+          "bytes": 719,
+          "sha256": "dd568f8538c063031a21b13e5dbdf376b346bd6b6dbff963da8014609f7a3c19"
+        },
+        {
+          "name": "embeddings.npy",
+          "bytes": 12200576,
+          "sha256": "f5b4b492d0f0b59b7e0453877a9d1f9f5e725bbb7a11a4fbaa4a67ef735a35a1"
+        },
+        {
+          "name": "faiss_index.bin",
+          "bytes": 12200493,
+          "sha256": "0f310bda6572c124bda02be6a1494f87c48839528049154d30b5b4480d76a961"
+        },
+        {
+          "name": "parent_chunks.json",
+          "bytes": 8800317,
+          "sha256": "be2d0038895162a27ffdb75da26aa9132a10eeaa8a59e83b70855e3d075e58ec"
+        }
+      ]
+    }
+  },
+  "ollama": {
+    "model": "qwen3:4b",
+    "digest": "359d7dd4bcdab3d86b87d73ac27966f4dbb9f5efdfcc75d34a8764a09474fae7"
+  },
+  "note": "Exact inference assets only; no model tensors or corpus text included. GitHub clone is not run-ready until these assets are restored."
+}

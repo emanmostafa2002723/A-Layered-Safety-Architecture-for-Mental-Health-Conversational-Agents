@@ -1,0 +1,15 @@
+# Versions from the university diagnostic, not a complete reproducible lock.
+# Torch is installed separately for the chosen CPU/CUDA platform.
+transformers==5.15.0
+peft==0.21.2
+bitsandbytes==0.50.2
+sentence-transformers==6.1.0
+faiss-cpu==1.15.1
+rank-bm25==0.2.2
+fastapi==0.143.2
+pydantic==2.14.1
+uvicorn==0.54.0
+scipy
+scikit-learn
+sentencepiece
+PyYAML>=6,<7

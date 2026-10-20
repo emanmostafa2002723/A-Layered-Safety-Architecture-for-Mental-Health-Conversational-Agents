@@ -1,0 +1,117 @@
+{
+  "type": "object",
+  "required": [
+    "schema_version",
+    "guardrail_status",
+    "decision",
+    "reason_codes",
+    "action",
+    "final_response"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "output-guardrail-result-1.0"
+    },
+    "guardrail_status": {
+      "enum": [
+        "OK",
+        "ERROR",
+        "TIMEOUT",
+        "INVALID_INPUT"
+      ]
+    },
+    "decision": {
+      "enum": [
+        "ALLOW",
+        "BLOCK"
+      ]
+    },
+    "reason_codes": {
+      "type": "array",
+      "items": {
+        "$ref": "finding_schema.json#/properties/reason_code"
+      },
+      "maxItems": 32,
+      "uniqueItems": true
+    },
+    "action": {
+      "enum": [
+        "DISPLAY",
+        "REWRITE",
+        "SAFE_FALLBACK",
+        "ABSTAIN"
+      ]
+    },
+    "final_response": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1,
+      "maxLength": 20000
+    }
+  },
+  "additionalProperties": false,
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "decision": {
+            "const": "ALLOW"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "guardrail_status": {
+            "const": "OK"
+          },
+          "action": {
+            "const": "DISPLAY"
+          },
+          "reason_codes": {
+            "maxItems": 0
+          },
+          "final_response": {
+            "type": "string"
+          }
+        }
+      },
+      "else": {
+        "properties": {
+          "final_response": {
+            "type": "null"
+          },
+          "action": {
+            "enum": [
+              "REWRITE",
+              "SAFE_FALLBACK",
+              "ABSTAIN"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "action": {
+            "const": "REWRITE"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "final_response": {
+            "type": "null"
+          },
+          "guardrail_status": {
+            "const": "OK"
+          }
+        }
+      }
+    }
+  ],
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://output-guardrail.invalid/schemas/decision_schema.json"
+}

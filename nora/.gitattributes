@@ -1,0 +1,11 @@
+# Preserve sealed upstream bytes, including their original line endings.
+# Normalizing those files on commit/checkout would invalidate their hashes.
+* -text
+*.sh text eol=lf
+*.safetensors -text
+*.pt -text
+*.bin -text
+*.faiss -text
+*.pkl -text
+*.npy -text
+*.npz -text

@@ -1,0 +1,9 @@
+{
+  "mistral-7b-instruct-v0.3": "/home/jovyan/full_pipeline_server/Mental_Health_Chat_Full_Pipeline_ST01c_PhoenixV3_2026-10-14/models/mistral-7b-instruct-v0.3",
+  "phoenix_v6_safe_lora": "/home/jovyan/mental_health_ft/outputs/phoenix_v6_safe_lora/final_model",
+  "all-MiniLM-L6-v2": "/home/jovyan/full_pipeline_server/Mental_Health_Chat_Full_Pipeline_ST01c_PhoenixV3_2026-10-14/models/all-MiniLM-L6-v2",
+  "bge-reranker-large": "/home/jovyan/full_pipeline_server/Mental_Health_Chat_Full_Pipeline_ST01c_PhoenixV3_2026-10-14/models/bge-reranker-large",
+  "rag": "/home/jovyan/rag_project/data/processed",
+  "crisis": null,
+  "boundary": null
+}

@@ -1,0 +1,28 @@
+name: NORA source-only checks
+on:
+  push:
+    paths: ['nora/**', '.github/workflows/nora-source-checks.yml']
+  pull_request:
+    paths: ['nora/**', '.github/workflows/nora-source-checks.yml']
+permissions:
+  contents: read
+defaults:
+  run:
+    working-directory: nora
+jobs:
+  source:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: python scripts/audit_source.py
+      - run: pip install -e '.[test]' numpy
+      - name: Account and policy contracts; no model download
+        run: PYTHONPATH=src pytest -q tests/test_account_memory.py tests/test_account_hardening.py tests/test_account_live_http.py tests/test_account_ui_contracts.py tests/test_nora_integration.py tests/test_schemas.py tests/test_response_policy_builder.py tests/test_response_policy_situation_codes.py tests/test_session_store.py tests/test_resources.py tests/test_server_assets.py
