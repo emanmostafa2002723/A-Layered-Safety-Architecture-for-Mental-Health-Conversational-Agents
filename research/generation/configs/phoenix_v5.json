@@ -1,0 +1,52 @@
+{
+  "version": "v5",
+  "version_key": "phoenix_v5",
+  "notebook": "notebooks/phoenix_v5_retrain_lora.ipynb",
+  "notebook_sha256": "2886cd9f3d0d8f84c9fd31a2f5b219fe55b0699e9f4c2ff324400f1381e18ed5",
+  "training_recipe": {
+    "base_model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "quantization": "4-bit NF4 + double quantization + BF16 compute",
+    "lora_rank": 16,
+    "lora_alpha": 32,
+    "lora_dropout": 0.05,
+    "target_modules": [
+      "q_proj",
+      "v_proj"
+    ],
+    "learning_rate": 0.0001,
+    "epochs": 2,
+    "max_seq_length": 2048,
+    "optimizer": "paged_adamw_8bit",
+    "microbatch": 1,
+    "grad_accum": 4,
+    "weight_decay": 0.01,
+    "assistant_target_masking": true,
+    "chat_template": "tokenizer.apply_chat_template (Mistral v0.3 native)"
+  },
+  "principal_change": "Removed ESConv entirely from the mixture. Increased CounselChat allocation from 2,500 to 3,500 to compensate. Recipe identical to v4.",
+  "motivation": "ESConv taught a counsellor follow-up pattern (Tell me more about that) that leaked into single-turn Q&A. v4 review showed even simple factual questions sometimes received a counsellor follow-up before the answer.",
+  "achieved": "5,558 actual training examples (ESConv block was 915 actual records despite 6,500 cap). Checkpoint at step 2,600, eval_loss 1.3073, 69.4 min training. Built-in panel preserved 0/20, 0/10, 8/8, 0/8 and eliminated the leaked follow-up pattern. Teammate test: 15/16 completion at 4.34 s median latency.",
+  "not_achieved": "Three v5 issues identified by teammate review: (i) repetitive greeting reply; (ii) no immediate-safety question on suicide disclosure; (iii) unsolicited phone numbers in disclosure responses. One case failed when the model misinterpreted the user's exam-stress follow-up.",
+  "mixture_blocks": {
+    "counselchat": 2491,
+    "beavertails": 1000,
+    "refusal": 500,
+    "dolly": 500,
+    "verified_instruction_following": 370,
+    "persona": 500,
+    "self_harm_safety": 50,
+    "drug_related_safety": 30,
+    "benign": 57,
+    "crisis_disclosure": 36,
+    "rag_examples": 24
+  },
+  "mixture_total": 5558,
+  "expected_checkpoint_step": 2600,
+  "expected_eval_loss": 1.3073,
+  "expected_training_minutes": 69.4,
+  "adapter_sha256": null,
+  "report_reference": "Section 4.10 (lineage), Section 5.10 Table 15 (built-in panel + teammate test), Section 5.6 Table 15 (V5 vs V6 matched comparison)",
+  "release_status": "intermediate (superseded by v6; v6 recommended by teammate review)",
+  "production_authorized": false,
+  "prepared_at": "2026-10-20T23:04:13Z"
+}

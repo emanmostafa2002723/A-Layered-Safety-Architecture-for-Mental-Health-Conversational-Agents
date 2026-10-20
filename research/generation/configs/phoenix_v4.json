@@ -1,0 +1,53 @@
+{
+  "version": "v4",
+  "version_key": "phoenix_v4",
+  "notebook": "notebooks/phoenix_v4_retrain_lora.ipynb",
+  "notebook_sha256": "0432a7ee05c647afefef19f2f0e179a0722ac5a7c0884e33b90e386f5de8d1e7",
+  "training_recipe": {
+    "base_model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "quantization": "4-bit NF4 + double quantization + BF16 compute",
+    "lora_rank": 16,
+    "lora_alpha": 32,
+    "lora_dropout": 0.05,
+    "target_modules": [
+      "q_proj",
+      "v_proj"
+    ],
+    "learning_rate": 0.0001,
+    "epochs": 2,
+    "max_seq_length": 2048,
+    "optimizer": "paged_adamw_8bit",
+    "microbatch": 1,
+    "grad_accum": 4,
+    "weight_decay": 0.01,
+    "assistant_target_masking": true,
+    "chat_template": "tokenizer.apply_chat_template (Mistral v0.3 native)"
+  },
+  "principal_change": "Six data-only fixes mapping one-to-one to the six v3 Sentinel failures: (1) IFEval targets generated with base Mistral and rule-checked; (2) 36 crisis-disclosure templates; (3) 5 persona system-prompt variants; (4) 60 benign Q&A pairs; (5) 24 RAG-format examples with citation markers; (6) v2 refusal blocks preserved.",
+  "motivation": "Each of the six v3 Sentinel failures maps directly to one v4 fix. v4 is a one-fix-per-failure release.",
+  "achieved": "6,473 actual training examples, checkpoint at step 1,400, eval_loss 1.4638, 57.6 min training. Built-in panel: 0/20 over-refusal, 0/10 disclosure failures, 8/8 crisis-disclosure resources, 0/8 follow-up pattern hits.",
+  "not_achieved": "Did not address the ESConv-leaked counsellor follow-up pattern (Tell me more about that) that was still present in single-turn Q&A. Teammate review identified this as the most visible v4 regression.",
+  "mixture_blocks": {
+    "counselchat": 2491,
+    "beavertails": 1000,
+    "refusal": 500,
+    "dolly": 500,
+    "verified_instruction_following": 370,
+    "persona": 500,
+    "self_harm_safety": 50,
+    "drug_related_safety": 30,
+    "benign": 57,
+    "crisis_disclosure": 36,
+    "rag_examples": 24,
+    "esconv": "preserved but later removed in v5"
+  },
+  "mixture_total": 6473,
+  "expected_checkpoint_step": 1400,
+  "expected_eval_loss": 1.4638,
+  "expected_training_minutes": 57.6,
+  "adapter_sha256": null,
+  "report_reference": "Section 4.10 (lineage), Section 5.10 Table 15 (built-in panel results), Appendix C1",
+  "release_status": "intermediate (superseded by v5 then v6)",
+  "production_authorized": false,
+  "prepared_at": "2026-10-20T23:04:13Z"
+}
