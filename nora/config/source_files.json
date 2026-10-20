@@ -409,8 +409,8 @@
     },
     {
       "path": "docs/ART_PROMPTS.md",
-      "bytes": 1977,
-      "sha256": "19a83ca914fec7ee21999f4c26941c2fcdb2b9f16a41abb630e499e8a75712eb"
+      "bytes": 3527,
+      "sha256": "99dbdd0275b4255c917736337eff9c32460fda13a980a16e53484701b34db735"
     },
     {
       "path": "docs/ASSET_CREDITS.md",
@@ -474,8 +474,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 12864,
-      "sha256": "4895b9fbeabe5a7fea0ea89925b7df6f91ed11f8407dee2d9b2e8d4c9533570c"
+      "bytes": 12904,
+      "sha256": "98b072ce1a069f13f6e03b1483f9f3ac9d80b26e9c069c5b3b455c2499d69d4a"
     },
     {
       "path": "requirements-gradio.txt",
@@ -873,9 +873,14 @@
       "sha256": "30e75e232fe07316e3fb0b7784378a1612daa2f8fb681757e1051ea41e2c50f0"
     },
     {
+      "path": "src/mental_health_pipeline/web_nora/assets/nora-favicon.png",
+      "bytes": 2784,
+      "sha256": "59c18d530fb16e61561cd68dd92e66fbe14a7d2e360aae9edb8edb88bb2a74c2"
+    },
+    {
       "path": "src/mental_health_pipeline/web_nora/assets/nora-logo.png",
-      "bytes": 522208,
-      "sha256": "ebf6db031209f250e4f790935f264f88edae193bc6916f5644e981cbd396e5e5"
+      "bytes": 64313,
+      "sha256": "2115e7992e06e197e937c7b6f9fdd5f5f9f7e36391f0c20b50d0761211ed11d8"
     },
     {
       "path": "src/mental_health_pipeline/web_nora/assets/resource-reading.jpg",
@@ -909,8 +914,8 @@
     },
     {
       "path": "src/mental_health_pipeline/web_nora/index.html",
-      "bytes": 2529,
-      "sha256": "8db354116feba4c893fe218d8ddd459fa77b8982481c38c2d37ff050a62e72ce"
+      "bytes": 2679,
+      "sha256": "f38382dadc55f07367a50069b377fca3f233328a32925cea6766a772f2ea63bc"
     },
     {
       "path": "src/mental_health_pipeline/web_nora/styles.css",
@@ -1019,8 +1024,8 @@
     },
     {
       "path": "tests/test_nora_integration.py",
-      "bytes": 5957,
-      "sha256": "0f77970c8e8f0690c92cbbafec14e56a34f04ec8a1adb744051854225fa1bcc5"
+      "bytes": 6686,
+      "sha256": "7395e219b9d1119e3ada4b6ade020a9dbe387f891dc550c1ac96fc9a3d6806d3"
     },
     {
       "path": "tests/test_orchestrator.py",
