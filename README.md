@@ -17,6 +17,8 @@ Calm conversation · Conditional safety guidance · Retrieval-augmented support 
 
 </div>
 
+[![NORA source-only checks](https://github.com/emanmostafa2002723/A-Layered-Safety-Architecture-for-Mental-Health-Conversational-Agents/actions/workflows/nora-source-checks.yml/badge.svg?branch=main)](https://github.com/emanmostafa2002723/A-Layered-Safety-Architecture-for-Mental-Health-Conversational-Agents/actions/workflows/nora-source-checks.yml)
+
 ## The current application
 
 The latest NORA website and full-pipeline integration are in **[`nora/`](nora/)**.
@@ -41,6 +43,14 @@ included. Existing server model assets must be verified before reuse.
 
 Run application commands from the **`nora/` subfolder**, not the repository root.
 No model weights need to be committed to GitHub.
+
+### Verification
+
+The source-only export passed **392 local software tests** with three
+corpus-dependent skips. GitHub's **Linux / Python 3.12** submission checks
+passed **182 account, interface, policy and asset-restoration tests**, plus
+the reviewed source-file integrity check. These checks do not load the
+learned models or replace server inference and clinical acceptance tests.
 
 ## Existing WellBeing Agent reference
 

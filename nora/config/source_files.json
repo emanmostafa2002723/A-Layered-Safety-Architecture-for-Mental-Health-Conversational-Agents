@@ -439,8 +439,8 @@
     },
     {
       "path": "docs/SOURCE_EXPORT_VERIFICATION.md",
-      "bytes": 4296,
-      "sha256": "37d1e9ea55f34e1f7cb7fd9cb787d6dcf978c4c8f6586add30ce8a4891e24b02"
+      "bytes": 4940,
+      "sha256": "ca49b7f3961cf6d57c94841dc4151614ed17d0cf182763ce36fcc958057953a1"
     },
     {
       "path": "pyproject.toml",

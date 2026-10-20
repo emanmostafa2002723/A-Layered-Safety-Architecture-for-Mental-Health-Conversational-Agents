@@ -9,7 +9,13 @@
 - Asset linker tests cover read-only planning, exact hashes, missing mappings, safe paths, preserving existing mismatched targets and rollback of only newly created links on a simulated failure.
 - No model tensor, trained adapter, knowledge-corpus text/index binary, private database, encryption key, environment or original model cache was copied into this source export.
 
-The original full development copy recorded 711 passing tests/two environment-specific skips and a real-model HTTP smoke run. Those are historical development evidence, **not** a fresh learned-model benchmark of this source export or a Linux/server result. The export tests used the available local Python 3.13 environment; the declared deployment target remains Python 3.12. The supplied GitHub workflow targets 3.12 but has not been run remotely by this task.
+The original full development copy recorded 711 passing tests/two environment-specific skips and a real-model HTTP smoke run. Those are historical development evidence, **not** a fresh learned-model benchmark of this source export or a Linux/server result. The export tests used the available local Python 3.13 environment; the declared deployment target remains Python 3.12.
+
+## GitHub verification
+
+On 20 October 2026, the submission workflow passed on Ubuntu with Python 3.12 and Node 22: **182 passed, 1 warning in 25.34 seconds**, plus the 217-file source integrity check. Both the push and pull-request jobs passed. The selected CI suite covers accounts, interface contracts, response policy, resources and server asset-linking behavior without downloading or loading models.
+
+[Verified pull-request run](https://github.com/emanmostafa2002723/A-Layered-Safety-Architecture-for-Mental-Health-Conversational-Agents/actions/runs/39468400530). This is source-level CI evidence, not a claim that the university server has been migrated or the learned pipeline has been re-benchmarked there.
 
 ## Why the size is small
 
@@ -33,7 +39,7 @@ After restoring models, use `--allow-runtime-assets` for a server-side source au
 
 1. Review GitHub repository contents/history and visibility before publishing; no force push or overwrite.
 2. Confirm team/source/image/model/data redistribution permissions. No project-wide open-source license has been selected automatically.
-3. Run source checks on Linux/Python 3.12 and review the existing server packages before any installation.
+3. Linux/Python 3.12 source CI has passed; still review the existing university-server packages before any installation.
 4. Restore and hash-check current assets, then run Qwen, RAG, crisis and full guarded smoke tests on the server.
 5. Manually check the connected website in a browser. Browser automation was unavailable in the earlier interface work; DOM/fetch doubles are not visual/accessibility testing.
 6. Keep deployment private/loopback. Public HTTPS, identity/recovery, operational privacy and clinical acceptance are not resolved by a GitHub upload.
