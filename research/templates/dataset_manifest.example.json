@@ -1,0 +1,43 @@
+{
+  "template_only": true,
+  "dataset_id": null,
+  "version": null,
+  "component": null,
+  "provenance": {
+    "kind": null,
+    "source_references": [],
+    "generation_model_revision": null,
+    "generation_prompt_paths": [],
+    "generation_code_commit": null
+  },
+  "schema_reference": null,
+  "label_map_reference": null,
+  "splits": {
+    "train": null,
+    "validation": null,
+    "calibration": null,
+    "test": null
+  },
+  "grouping_and_deduplication_reference": null,
+  "files": [],
+  "file_record_format": {
+    "path": "relative/path/to/approved_file.jsonl",
+    "bytes": null,
+    "sha256": null,
+    "records": null,
+    "split": null
+  },
+  "sharing_review": {
+    "status": "not_reviewed",
+    "approved_visibility": null,
+    "reviewer": null,
+    "reviewed_at": null,
+    "license_or_access_terms": null,
+    "review_evidence": null
+  },
+  "external_access": {
+    "location": null,
+    "immutable_revision": null,
+    "restrictions": null
+  }
+}

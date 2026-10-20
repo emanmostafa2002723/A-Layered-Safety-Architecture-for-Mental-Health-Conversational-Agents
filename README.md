@@ -14,7 +14,7 @@ A calm web experience. Context-aware conversations. Multiple safety checks.
 
 **Graduation project · English-speaking adults · Private testing candidate**
 
-[Explore the system](#how-nora-works) · [Run NORA](#getting-started) · [Review the evidence](#testing-and-evidence) · [Browse the code](nora/src/mental_health_pipeline/)
+[Explore the system](#how-nora-works) · [Run NORA](#getting-started) · [Research folders](research/README.md) · [Review the evidence](#testing-and-evidence) · [Browse the code](nora/src/mental_health_pipeline/)
 
 </div>
 
@@ -33,6 +33,7 @@ A calm web experience. Context-aware conversations. Multiple safety checks.
 - [Memory and privacy](#memory-and-privacy)
 - [Getting started](#getting-started)
 - [Testing and evidence](#testing-and-evidence)
+- [Research and reproducibility](#research-and-reproducibility)
 - [Project map](#project-map)
 - [Documentation library](#documentation-library)
 - [Current status and limitations](#current-status-and-limitations)
@@ -292,12 +293,32 @@ PYTHONPATH=src .venv-tests/bin/python -m pytest -q \
 
 These commands install software test dependencies, not model weights. After restoring runtime assets, use `python scripts/audit_source.py --allow-runtime-assets` for source checks and the asset linker for model checksums.
 
+## Research and reproducibility
+
+The runnable application lives in **[nora/](nora/)**. Component experiments belong in the separate **[research/](research/README.md)** area, so reviewers can follow the experiment story without confusing an older trial with the selected runtime.
+
+There are dedicated folders for [crisis](research/crisis_classifier/), [input boundary](research/boundary_guardrail/), [RAG](research/rag/), [Phoenix generation](research/generation/), [output guardrails](research/output_guardrail/), [response policy](research/response_policy/), [integration](research/system_integration/), [personal memory/accounts](research/personal_memory/) and [web UI](research/web_interface/).
+
+Each component has an upload map and relevant folders for preparation, code/configs, notebooks, evaluation, data documentation and results. Owners should document baseline → changes → evidence → selected/rejected outcome using the supplied templates.
+
+**Current status: structure only.** The research folders are ready for team uploads; no historical experiments or datasets were copied or approved by creating them. Uploading a research candidate does not automatically change the application.
+
+- **Team members:** follow the [upload instructions](CONTRIBUTING.md) and [research PR template](.github/PULL_REQUEST_TEMPLATE/research_upload.md).
+- **Experiment authors:** complete an [experiment card](research/templates/EXPERIMENT_CARD.md) and [run manifest](research/templates/run_manifest.example.json).
+- **Dataset authors:** follow the [synthetic-data sharing review](research/DATA_SHARING.md), [dataset card](research/templates/DATASET_CARD.md) and [manifest example](research/templates/dataset_manifest.example.json). Synthetic status alone is not permission to publish.
+
 ## Project map
 
 ```text
 .
 ├── README.md                         Submission overview and navigation
+├── CONTRIBUTING.md                   Team research-upload and review instructions
 ├── .github/workflows/                Active source-only Linux CI
+├── research/                         Component experiment stories; awaiting team uploads
+│   ├── README.md                     Component index and reproduction conventions
+│   ├── DATA_SHARING.md               Synthetic/source-data publication checklist
+│   ├── templates/                    Experiment cards and dataset/run manifests
+│   └── <component>/                  Relevant code folders, data guide and results guide
 └── nora/                             Run application commands here
     ├── src/mental_health_pipeline/
     │   ├── orchestrator.py           Complete guarded turn lifecycle
@@ -323,6 +344,8 @@ Runtime model folders are intentionally absent from this tree. Compatibility/exp
 | Looking for… | Go here |
 | --- | --- |
 | Application-specific overview | [NORA application README](nora/README.md) |
+| Component experiments and team uploads | [Research index](research/README.md) · [Contribution guide](CONTRIBUTING.md) |
+| Synthetic-data sharing and reproducibility records | [Sharing checklist](research/DATA_SHARING.md) · [Dataset card](research/templates/DATASET_CARD.md) · [Experiment card](research/templates/EXPERIMENT_CARD.md) |
 | Server setup and reuse of existing weights | [Server migration guide](nora/docs/SERVER_SETUP.md) |
 | Exact model/corpus files and checksums | [Runtime asset inventory](nora/config/runtime_assets.json) · [Pipeline artifact manifest](nora/config/artifacts.json) |
 | Configuration templates | [Environment example](nora/config/server-assets.env.example) · [Server asset mapping](nora/config/server-assets.example.json) · [Output judge settings](nora/config/local_output_guard.json) |
