@@ -1,8 +1,3 @@
-# wellbeing-guardrails
-Layered safety guardrails for the WellBeing Agent - Queen's University    Visibility: Private (keep your work private)
-
----
-
 <div align="center">
 
 <img src="nora/src/mental_health_pipeline/web_nora/assets/nora-logo.png" width="100" alt="NORA logo">
@@ -16,6 +11,8 @@ Calm conversation · Conditional safety guidance · Retrieval-augmented support 
 **Private graduation-project integration · English-speaking adults**
 
 </div>
+
+[![NORA source-only checks](https://github.com/emanmostafa2002723/A-Layered-Safety-Architecture-for-Mental-Health-Conversational-Agents/actions/workflows/nora-source-checks.yml/badge.svg?branch=main)](https://github.com/emanmostafa2002723/A-Layered-Safety-Architecture-for-Mental-Health-Conversational-Agents/actions/workflows/nora-source-checks.yml)
 
 ## The current application
 
@@ -42,12 +39,13 @@ included. Existing server model assets must be verified before reuse.
 Run application commands from the **`nora/` subfolder**, not the repository root.
 No model weights need to be committed to GitHub.
 
-## Existing WellBeing Agent reference
+### Verification
 
-The original [`wellbeing_agent`](wellbeing_agent) submodule and its Git settings
-are preserved. It is separate from the current NORA implementation; it is not
-automatically imported or used as its runtime code. Cloning NORA does not
-require recursively downloading that submodule.
+The source-only export passed **392 local software tests** with three
+corpus-dependent skips. GitHub's **Linux / Python 3.12** submission checks
+passed **182 account, interface, policy and asset-restoration tests**, plus
+the reviewed source-file integrity check. These checks do not load the
+learned models or replace server inference and clinical acceptance tests.
 
 > **Safety and release status:** NORA is an AI companion, not a human therapist,
 > diagnostic service or emergency service. This integration supports private

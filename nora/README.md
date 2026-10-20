@@ -99,9 +99,9 @@ Server source folders are mapped in a private JSON file. The supplied linker che
 
 This is a source-only project: Python **3.12**, matching model assets and a working pinned **qwen3:4b** Ollama service are required. A clone is not immediately inference-ready.
 
-In the existing team repository, this application lives under **`nora/`**.
-Enter that folder before running the commands below. The retained
-`wellbeing_agent` submodule is a separate reference, not the current runtime.
+In the team repository, this application lives under **`nora/`**.
+Enter that folder before running the commands below; no external application
+submodule is required.
 
 ```bash
 # In the new server checkout, after restoring/verifying assets:
