@@ -17,6 +17,10 @@ Calm conversations · Retrieval-augmented support · User-controlled memory
 
 > **Source-only repository.** The website and latest integration code are included. Model weights and knowledge assets are restored separately from verified server files; no trained checkpoint is downloaded by installing Python requirements.
 
+For the complete submission overview, linked component tour and navigation,
+see the **[repository README](../README.md)**. This page is the application-local
+guide; run its commands from this `nora/` folder.
+
 ## Meet NORA
 
 NORA combines a gentle web experience with a structured mental-health conversation pipeline. Its interface offers a space to talk, optional grounding activities, a small resource library, customizable avatars and clear controls over what is remembered.
@@ -158,6 +162,12 @@ explicitly skipped because the private RAG corpus is not included. Its
 component-import, account-isolation, UI/API, policy and hard-link safety tests
 ran locally without loading model weights. A server inference run is still
 required after assets are restored. See [verification](docs/SOURCE_EXPORT_VERIFICATION.md).
+
+GitHub's Linux/Python **3.12** source-only checks passed **182 tests**, plus the
+**217-file** reviewed-source integrity check. This is a separate, selected
+model-free CI suite—not a rerun of every local development test. See the
+[active workflow](../.github/workflows/nora-source-checks.yml) and
+[latest runs](https://github.com/emanmostafa2002723/A-Layered-Safety-Architecture-for-Mental-Health-Conversational-Agents/actions/workflows/nora-source-checks.yml).
 
 The integrated development copy recorded **711 passing software tests and two environment-specific skips** on 20 October 2026. Additional synthetic HTTP tests exercised the real pipeline, profile persistence, cross-chat recall and account deletion. These are local engineering results, not a published CI result, representative clinical trial or guarantee of safety.
 
