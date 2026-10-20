@@ -1,0 +1,53 @@
+{
+  "type": "object",
+  "required": [
+    "evidence_id",
+    "source_id",
+    "source_version",
+    "text",
+    "review_status",
+    "metadata"
+  ],
+  "properties": {
+    "evidence_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 256
+    },
+    "source_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1,
+      "maxLength": 256
+    },
+    "source_version": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1,
+      "maxLength": 256
+    },
+    "text": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 20000
+    },
+    "review_status": {
+      "enum": [
+        "approved",
+        "pending",
+        "rejected",
+        null
+      ]
+    },
+    "metadata": {
+      "$ref": "finding_schema.json#/properties/metadata"
+    }
+  },
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://output-guardrail.invalid/schemas/evidence_schema.json"
+}

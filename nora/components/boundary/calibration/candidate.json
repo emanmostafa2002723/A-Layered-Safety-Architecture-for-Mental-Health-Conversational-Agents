@@ -1,0 +1,49 @@
+{
+  "schema": "boundary-confidence-candidate-2.0",
+  "labels": [
+    "diagnosis",
+    "medication_decision",
+    "clinical_treatment",
+    "harmful_medical_instruction"
+  ],
+  "model_sha256": "328de3a047d6c144d8a13f2cdf77e7abba6aeeb58b0619e16c4bb37830054023",
+  "legacy_calibration_sha256": "840cb975fe903bb971c6e06148947f9fbff94afcdb4be667b0ee6d468a42e2a2",
+  "dataset_manifest_sha256": "e64824dce771abeb99730041ff8a13a0f25e0917d9583fe5e8f554295c086d67",
+  "confidence_transform": {
+    "kind": "sigmoid",
+    "slopes": [
+      0.9818326596587437,
+      0.656904552387738,
+      1.802986323266167,
+      0.5829582640489345
+    ],
+    "biases": [
+      -1.0583445342676312,
+      -1.1676564654333428,
+      -0.6165149558172919,
+      -1.673163739460723
+    ],
+    "regularization": 0.01,
+    "optimizer_ok": true,
+    "at_parameter_bound": false,
+    "fit_families": 60
+  },
+  "legacy_equivalent_logit_cutoffs": [
+    4.91694103136039,
+    4.916928462401522,
+    4.9169325592202435,
+    4.9169321715047705
+  ],
+  "decision_mode": "legacy_equivalent_logit_comparison",
+  "confidence_improved_on_method_selection": true,
+  "new_routing_thresholds_promoted": false,
+  "audit_seen_before_selection": false,
+  "clinical_deployment_ready": false,
+  "validation_scope": "authored_weak_diagnostic_corpus_not_clinical",
+  "role_separation": {
+    "transform_fit": "probability_fit",
+    "method_choice": "method_selection",
+    "new_threshold_assessment": "threshold_selection",
+    "reserved_audit": "audit"
+  }
+}

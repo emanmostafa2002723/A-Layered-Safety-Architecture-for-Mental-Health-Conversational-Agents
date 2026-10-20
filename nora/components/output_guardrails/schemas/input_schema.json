@@ -1,0 +1,57 @@
+{
+  "type": "object",
+  "required": [
+    "schema_version",
+    "generated_response",
+    "system_route",
+    "response_policy",
+    "verification_evidence",
+    "execution_context"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "output-guardrail-input-1.0"
+    },
+    "generated_response": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 20000
+    },
+    "system_route": {
+      "enum": [
+        "normal_chat",
+        "monitored_support",
+        "clinical_boundary_safe_completion",
+        "urgent_medical_response",
+        "crisis_response"
+      ]
+    },
+    "response_policy": {
+      "$ref": "response_policy_schema.json"
+    },
+    "verification_evidence": {
+      "type": "array",
+      "items": {
+        "$ref": "evidence_schema.json"
+      },
+      "maxItems": 32,
+      "uniqueItems": true
+    },
+    "execution_context": {
+      "type": "object",
+      "required": [
+        "rewrite_attempt"
+      ],
+      "properties": {
+        "rewrite_attempt": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://output-guardrail.invalid/schemas/input_schema.json"
+}

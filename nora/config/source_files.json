@@ -1,0 +1,1091 @@
+{
+  "schema_version": "nora-source-files/1.0",
+  "clinical_deployment_ready": false,
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 267,
+      "sha256": "ffabf6d8ce671666363bf0f59bbf7232bd74640f55bbefae6a62416b71bded6a"
+    },
+    {
+      "path": ".github/workflows/source-checks.yml",
+      "bytes": 875,
+      "sha256": "82705b635b39d55e1ac13466a2bf97b89d21dae97644e1351ef3e62eb08281a4"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 586,
+      "sha256": "88147558f51b71a8c096d9ca72e6d4ac4ce53d801df93f84cbe1b139b69fa318"
+    },
+    {
+      "path": "components/boundary/boundary/__init__.py",
+      "bytes": 106,
+      "sha256": "cde7f859a53d48b2a306bf03de212ee4798d294fe2372b56911e5282a7af5e23"
+    },
+    {
+      "path": "components/boundary/boundary/conservative.py",
+      "bytes": 3775,
+      "sha256": "0689b22be3d96a8e163f017770ca22b9c3079d6dd20d993d665fc425250541eb"
+    },
+    {
+      "path": "components/boundary/boundary/corrected.py",
+      "bytes": 3010,
+      "sha256": "9f1c6988cf48e1ba55f6b3f0117e34f0da9fce504fa1ef5893268c48816891e7"
+    },
+    {
+      "path": "components/boundary/boundary/integration.py",
+      "bytes": 2750,
+      "sha256": "d2094d8e2c94da147f490bfc07aec766528e148b08885c0cc0015bd7a370891c"
+    },
+    {
+      "path": "components/boundary/boundary/mvp.py",
+      "bytes": 9663,
+      "sha256": "9da8a3a99fbd3367ac8dd466d89a18cb0a0ca56cb281e868dfa91d17b1e96d94"
+    },
+    {
+      "path": "components/boundary/boundary/policy.py",
+      "bytes": 6785,
+      "sha256": "67cfad5f993c5e240aece2e3f63dc06d6eb41e869a4fa049aae355bbbfc2c99d"
+    },
+    {
+      "path": "components/boundary/boundary/recalibrated.py",
+      "bytes": 4918,
+      "sha256": "0102dac70198a73dbebfeb1ec43d8c1c59bae61bec233d168b7f6b103637db9a"
+    },
+    {
+      "path": "components/boundary/boundary/research/__init__.py",
+      "bytes": 69,
+      "sha256": "e3e2a151095d534139a3a67b59ffca9c3d715bda8b6e6eb01614727f25c8105b"
+    },
+    {
+      "path": "components/boundary/boundary/research/calibration_v2.py",
+      "bytes": 11996,
+      "sha256": "a3b2263102d03015c1bd1fc94ddd59a5046b83fe469ecbf24bfb8b20a3f4d326"
+    },
+    {
+      "path": "components/boundary/boundary/research/contracts.py",
+      "bytes": 11374,
+      "sha256": "9797d0a8018677c7aa7f009524ae05bdff93c45fc09ac22caee9eeb6c9732b9c"
+    },
+    {
+      "path": "components/boundary/boundary/research/partial_calibration.py",
+      "bytes": 8210,
+      "sha256": "a4d5c387f53e1c020e5e09cdb17e7977e5fa4bc713a885a6cb876a1255d7c022"
+    },
+    {
+      "path": "components/boundary/boundary/research/partial_data.py",
+      "bytes": 4850,
+      "sha256": "2d387acc9d6696c83ea67387ad4a73da5c1c56dea59f0834995713a770d4eb5f"
+    },
+    {
+      "path": "components/boundary/boundary/schema.py",
+      "bytes": 2246,
+      "sha256": "71a51f127ab1e67714031ceb82d0bb990980aa9902b7468dd70e2660721a1517"
+    },
+    {
+      "path": "components/boundary/boundary/sources.py",
+      "bytes": 3732,
+      "sha256": "3a3ce4c09dc00deaeed9c645d18d6cc6e1e55888b8e6c1f14eaeaffe62449301"
+    },
+    {
+      "path": "components/boundary/calibration/candidate.json",
+      "bytes": 1553,
+      "sha256": "22ab59d26f5386f86b6446795e41c47e44df6c5125ca2a7d0fa17656ca156e5e"
+    },
+    {
+      "path": "components/boundary/RELEASE.json",
+      "bytes": 879,
+      "sha256": "c20770942e22e0f285496c96452741dcd3e6d72df1f52c66db849c4d8527b80d"
+    },
+    {
+      "path": "components/context_rules/src/input_guardrail/rules.py",
+      "bytes": 16577,
+      "sha256": "d46a336a6b99b63662f57de6aa104ad3d168ec9a3ee733a1bb7f6b1b749f5e60"
+    },
+    {
+      "path": "components/context_rules/src/input_guardrail/schemas.py",
+      "bytes": 2767,
+      "sha256": "eea73ff84048637f203dde10cf9273a76008d69e8fd416fe9e42e5a2666f145b"
+    },
+    {
+      "path": "components/output_guardrails/baseline/__init__.py",
+      "bytes": 41,
+      "sha256": "51e171822dbbae9286faa386272126b8bc66ad2946a0b14b227af6bbdedb97a6"
+    },
+    {
+      "path": "components/output_guardrails/baseline/contracts.py",
+      "bytes": 5853,
+      "sha256": "bbfc084e99054137f5cedf5e71816794f2da35d8ab926c82778cbf9e77af50b6"
+    },
+    {
+      "path": "components/output_guardrails/baseline/decision_mapper.py",
+      "bytes": 4570,
+      "sha256": "4e03346acd75f85be0ffc2f5e205037795fa0ad876639b3d983f7f437cd74e09"
+    },
+    {
+      "path": "components/output_guardrails/baseline/deterministic_checker.py",
+      "bytes": 1465,
+      "sha256": "a6aa5f42224d83343746d3a9ba3cae00819946ba938d5865cae208c5ee9625c1"
+    },
+    {
+      "path": "components/output_guardrails/baseline/execution.py",
+      "bytes": 6560,
+      "sha256": "efdd5be124eb98d78383117ac87dc8baf1869e77092084237a603126efcafff3"
+    },
+    {
+      "path": "components/output_guardrails/baseline/findings.py",
+      "bytes": 2270,
+      "sha256": "fa43da421ded12ae7129d404e5bfc3ec5475c1ee65d4d890546ee802d3d3a56f"
+    },
+    {
+      "path": "components/output_guardrails/baseline/recheck.py",
+      "bytes": 1199,
+      "sha256": "cbf4b44b1db1ef279f06ba52aea21f014e5864ddf651d20fc17451c8530136be"
+    },
+    {
+      "path": "components/output_guardrails/baseline/worker_spec.py",
+      "bytes": 4861,
+      "sha256": "d79085dde6bd3d28ae1f1b81eef0297396f65062cadb501a78862218c4d3c33a"
+    },
+    {
+      "path": "components/output_guardrails/config/__init__.py",
+      "bytes": 41,
+      "sha256": "51e171822dbbae9286faa386272126b8bc66ad2946a0b14b227af6bbdedb97a6"
+    },
+    {
+      "path": "components/output_guardrails/config/fusion_policy.py",
+      "bytes": 2183,
+      "sha256": "0c6f24d67374046c2d3e8ddcdf4e2e62cafab56b909e90fc4066dc854806f119"
+    },
+    {
+      "path": "components/output_guardrails/config/policies.py",
+      "bytes": 10213,
+      "sha256": "2bb6665a9aa94a479a8d4346a18c0bc719967b07c6304bda229702fbf1724c8b"
+    },
+    {
+      "path": "components/output_guardrails/config/routes.py",
+      "bytes": 1394,
+      "sha256": "b074fd081cb7b979626ebe6ba28188de31e40cbc143dc335f5c32b465756939e"
+    },
+    {
+      "path": "components/output_guardrails/config/runtime.py",
+      "bytes": 1316,
+      "sha256": "e7981a706e5c4f7e4f38b823cc4bae0644536b6c108a18056609e7b4e2e61412"
+    },
+    {
+      "path": "components/output_guardrails/config/severity.py",
+      "bytes": 279,
+      "sha256": "b0156dedc7c00bba6edc2ef68dbf62fb57d9d31d00d18979bd4f96d84158ab57"
+    },
+    {
+      "path": "components/output_guardrails/config/taxonomy.py",
+      "bytes": 716,
+      "sha256": "5452d565fdd2877963625e38d547efe7cffc1b87a29c17a65b1afeaa0e182072"
+    },
+    {
+      "path": "components/output_guardrails/config/versions.json",
+      "bytes": 2217,
+      "sha256": "d8bfb19a541f81664fbd2f278e5d6502e556817290c451b7dafeeffdcf07fedd"
+    },
+    {
+      "path": "components/output_guardrails/delivery/__init__.py",
+      "bytes": 76,
+      "sha256": "e15d474eaf4e9344e6dd78d8e92e5a1a2129ec2f7b77efcf8815c692dca57731"
+    },
+    {
+      "path": "components/output_guardrails/delivery/fallbacks.py",
+      "bytes": 2739,
+      "sha256": "8f5484d9a5b15b96ce498475cf922fcdb6c09f0304a4dbc6e37222ab654b5133"
+    },
+    {
+      "path": "components/output_guardrails/delivery/pipeline.py",
+      "bytes": 5506,
+      "sha256": "d8b7d7b364ac1713eecce0f87b25826eb5dfc8dd5cb914a5e6fe56d26f00bf90"
+    },
+    {
+      "path": "components/output_guardrails/evidence/__init__.py",
+      "bytes": 77,
+      "sha256": "27339ce4f1897766ffd4b9912330eb473046137ba47753bece3e923b750c00bc"
+    },
+    {
+      "path": "components/output_guardrails/evidence/checker.py",
+      "bytes": 5941,
+      "sha256": "ffa429c674ea01704f462a78dae33e160bb0adf6f4e3f98619a66a74031f67b2"
+    },
+    {
+      "path": "components/output_guardrails/integration/__init__.py",
+      "bytes": 71,
+      "sha256": "95bf31799b988d502a92879f49526726ad1860df383980a13ad4ae4648c1b5a9"
+    },
+    {
+      "path": "components/output_guardrails/integration/acceptance.py",
+      "bytes": 6174,
+      "sha256": "232552197e2f70cf220c0b78ddd020992a72f4fe91e15c7d28b921fb55279163"
+    },
+    {
+      "path": "components/output_guardrails/integration/application.py",
+      "bytes": 5643,
+      "sha256": "9912064ff0b56ab0f264b5dd36228101dd91cc77e768766eff2436ef81922a80"
+    },
+    {
+      "path": "components/output_guardrails/integration/evaluation.py",
+      "bytes": 9079,
+      "sha256": "6a122240ad96c99520d1bd93abe55e0445d83014fa9b1913230bc920b9bcefb6"
+    },
+    {
+      "path": "components/output_guardrails/integration/service.py",
+      "bytes": 2287,
+      "sha256": "d08eb9f92251c2549c770d153bbc0cfcdc2953804bf13cda1d2ff4ea3fb4d21e"
+    },
+    {
+      "path": "components/output_guardrails/providers/__init__.py",
+      "bytes": 88,
+      "sha256": "52770603ecb27ebfa4ff05934def7207a09aef4b2e840aa7947d41d2e33868a9"
+    },
+    {
+      "path": "components/output_guardrails/providers/http_transport.py",
+      "bytes": 6117,
+      "sha256": "bbbfcd8e1bf78c443e822e24a95ba8f321aa210c9bb3c2424331597a371e88c1"
+    },
+    {
+      "path": "components/output_guardrails/rules/__init__.py",
+      "bytes": 41,
+      "sha256": "51e171822dbbae9286faa386272126b8bc66ad2946a0b14b227af6bbdedb97a6"
+    },
+    {
+      "path": "components/output_guardrails/rules/base_rule.py",
+      "bytes": 1442,
+      "sha256": "43a6f777eed68f3f1fd6bc80293a4bcc393657e442945d6fc82e37ff6320d621"
+    },
+    {
+      "path": "components/output_guardrails/rules/harmful_content_rules.py",
+      "bytes": 1631,
+      "sha256": "06e945cc7e138ee85c0e71bc23212ffc18f9fcceb94a5fcf63c1a858fade863d"
+    },
+    {
+      "path": "components/output_guardrails/rules/leakage_rules.py",
+      "bytes": 387,
+      "sha256": "392708df000c39c88c1c83db8ba707d382591ca3dcd95587f7178edcb2704e24"
+    },
+    {
+      "path": "components/output_guardrails/rules/medical_rules.py",
+      "bytes": 3261,
+      "sha256": "942a11736218ab75b4ac8e8fa36bd0f3af102e1404de5878a9937afe8056ad34"
+    },
+    {
+      "path": "components/output_guardrails/rules/privacy_rules.py",
+      "bytes": 397,
+      "sha256": "f37871aa7adec2599c1f5e41a79636004ea9ea1324cff4481dbd567f3f106479"
+    },
+    {
+      "path": "components/output_guardrails/rules/registry.py",
+      "bytes": 930,
+      "sha256": "74ca317c5987ec5994c6fac9782ce5e409a8d1dedc4d3eb40b64026c9fcef434"
+    },
+    {
+      "path": "components/output_guardrails/schemas/__init__.py",
+      "bytes": 72,
+      "sha256": "b447b708e59aba242f8d630b4413df4d7811765ccc6282b518f1b05813c68e97"
+    },
+    {
+      "path": "components/output_guardrails/schemas/checker_result_schema.json",
+      "bytes": 1089,
+      "sha256": "0de6f13c3085febbeeb162bea9fb52f592aafdb5152e1c5f70f7e965c6753ede"
+    },
+    {
+      "path": "components/output_guardrails/schemas/decision_schema.json",
+      "bytes": 2306,
+      "sha256": "3798d8f4298141277377df0ec00bfb3d0e9876d474d7f8f35bf3aa2721dd330d"
+    },
+    {
+      "path": "components/output_guardrails/schemas/evidence_schema.json",
+      "bytes": 1053,
+      "sha256": "9033eeaa6dfe0c34b7b6641ea49f42ece17f88573164663c8ec41ea100ab2c33"
+    },
+    {
+      "path": "components/output_guardrails/schemas/finding_schema.json",
+      "bytes": 1397,
+      "sha256": "f2126350c3541d1744bb978c5ae9168f45e5326637f82f3aa08bf07b93f3c51d"
+    },
+    {
+      "path": "components/output_guardrails/schemas/input_schema.json",
+      "bytes": 1345,
+      "sha256": "4d75ae35d88e70c32c22c4d54baa47dfc8f64cd27bfbe0b723d1f1671139de68"
+    },
+    {
+      "path": "components/output_guardrails/schemas/response_policy_schema.json",
+      "bytes": 1688,
+      "sha256": "817a6b7687c50f305549be82b4c9542faec118408e55922a2f9ccc86dc804d3e"
+    },
+    {
+      "path": "components/output_guardrails/semantic/__init__.py",
+      "bytes": 73,
+      "sha256": "047ba1d270e90270dfcf07fd57b9cf1f70541dd815b4e7946c793d29fd316cb5"
+    },
+    {
+      "path": "components/output_guardrails/semantic/adversarial_seed.json",
+      "bytes": 5739,
+      "sha256": "e559d5ebe36870ca9746023a2de88137a759dd8ebeed11758ceb3e7c9ec05943"
+    },
+    {
+      "path": "components/output_guardrails/semantic/checker.py",
+      "bytes": 5554,
+      "sha256": "947281c9657213b4fda18c9e096082b63d94da85633fc86faf9b4211d0f34ec4"
+    },
+    {
+      "path": "components/output_guardrails/semantic/contract.py",
+      "bytes": 2309,
+      "sha256": "3bf39f9095da090f6203dd3d698979a21b49c11549ba4cbf7e0d519632e445e9"
+    },
+    {
+      "path": "components/output_guardrails/semantic/strategy.py",
+      "bytes": 4444,
+      "sha256": "cc30510055f241a0df7086b8cf2428df38d24bdba29d3d9f898ece4a9cfa7c6f"
+    },
+    {
+      "path": "components/output_guardrails/validators/__init__.py",
+      "bytes": 41,
+      "sha256": "51e171822dbbae9286faa386272126b8bc66ad2946a0b14b227af6bbdedb97a6"
+    },
+    {
+      "path": "components/output_guardrails/validators/contract_validator.py",
+      "bytes": 660,
+      "sha256": "2c639541b3bd13337d0a40511c4eb0f6d3ad6c675137573c1c352becc2e3fd55"
+    },
+    {
+      "path": "components/output_guardrails/validators/required_safety_validator.py",
+      "bytes": 4635,
+      "sha256": "41d1da4a12cb7ee5dd88c1bf56a73876d4afd55e8456bfc4c203d24d0f5d7826"
+    },
+    {
+      "path": "components/output_guardrails/validators/route_policy_validator.py",
+      "bytes": 2698,
+      "sha256": "7e3af3992ef73792eaedc6d0c237006d1f573bb8efffa1bc49e13ea826e66398"
+    },
+    {
+      "path": "config/artifacts.json",
+      "bytes": 9841,
+      "sha256": "c5279e0f5659ba98884334afcb249ee96991539ba849127fe2fd9a6e9b721046"
+    },
+    {
+      "path": "config/emergency_resources.v1.json",
+      "bytes": 3716,
+      "sha256": "566548878875fc288cd8ce5858beb62ec38175fd63cfd4c8d6ac2da1d47ba7ad"
+    },
+    {
+      "path": "config/governed_sources.json",
+      "bytes": 138,
+      "sha256": "02ab9bab5ddf8872b3f0afba714f22dbee1648a826c249dd2d9130b4f9e9acf9"
+    },
+    {
+      "path": "config/local_output_guard.json",
+      "bytes": 362,
+      "sha256": "eb155c4d23cf79c7c011994733f8345159fc15b399a09f1b920cf157ea950895"
+    },
+    {
+      "path": "config/output_providers.json",
+      "bytes": 178,
+      "sha256": "45371b509f3e607c278dcef7613e1c112bcac683e7b1e048901f965fb1c1f0d7"
+    },
+    {
+      "path": "config/release.json",
+      "bytes": 2897,
+      "sha256": "bdc5161859ff8831d8bad51315ad949228881b0b964e5746795c2bf321295c49"
+    },
+    {
+      "path": "config/runtime_assets.json",
+      "bytes": 9911,
+      "sha256": "3f34c7182cf5b9969d47da03e45169daa551798d9916e7d37a39f4ea5d4ed4f9"
+    },
+    {
+      "path": "config/server-assets.env.example",
+      "bytes": 1789,
+      "sha256": "48064596730dbd9eb333a0686732ebf6bec2acf0f1b57a15c0ecb18baf318fc0"
+    },
+    {
+      "path": "config/server-assets.example.json",
+      "bytes": 642,
+      "sha256": "f8f05f7e4125b619747b8dc243bf6515c81942e183d3d9adbc9b6ffa59858301"
+    },
+    {
+      "path": "docs/ART_PROMPTS.md",
+      "bytes": 1977,
+      "sha256": "19a83ca914fec7ee21999f4c26941c2fcdb2b9f16a41abb630e499e8a75712eb"
+    },
+    {
+      "path": "docs/ASSET_CREDITS.md",
+      "bytes": 2149,
+      "sha256": "a67e7a9da3e45cddf0d421d83bb89f0907f998300743854a5e8a89152270f2ba"
+    },
+    {
+      "path": "docs/GITHUB_UPLOAD.md",
+      "bytes": 2292,
+      "sha256": "36acd80bae8944480273d291ab3092bf972dce6952fabacccf8134caacfabf5d"
+    },
+    {
+      "path": "docs/NORA_CONNECTED_WEBSITE.md",
+      "bytes": 6441,
+      "sha256": "4f44df117a00b4b903594a9cc1117af120afb7308a9019f0f22286e301c511e7"
+    },
+    {
+      "path": "docs/NORA_WEB_INTEGRATION_VERIFICATION_2026-10-20.md",
+      "bytes": 5942,
+      "sha256": "2f98d95071996c9c3708a6253cdb0c257b3d156e4aebcfd170ae42825d36e2fd"
+    },
+    {
+      "path": "docs/SERVER_SETUP.md",
+      "bytes": 5865,
+      "sha256": "0551ec084b721f80a4a653d78e98cf35925460c43ba24c968d97c45c0ccec5d2"
+    },
+    {
+      "path": "docs/SOURCE_EXPORT_VERIFICATION.md",
+      "bytes": 4296,
+      "sha256": "37d1e9ea55f34e1f7cb7fd9cb787d6dcf978c4c8f6586add30ce8a4891e24b02"
+    },
+    {
+      "path": "pyproject.toml",
+      "bytes": 1849,
+      "sha256": "3cfe118454a2df88d5df49952bf79e0dbabcc32fa534ee085ddfa385c0235f8a"
+    },
+    {
+      "path": "rag_project/scripts/__init__.py",
+      "bytes": 79,
+      "sha256": "41b04ab888f1e2db518ce5f7ab0a8f0915f11356424a907f448bfd7968e2119d"
+    },
+    {
+      "path": "rag_project/scripts/retrieval_router.py",
+      "bytes": 6558,
+      "sha256": "9aef20d4b228a865f8223bf5e958b15760000492a56f214f12ff36d97d284aec"
+    },
+    {
+      "path": "rag_project/scripts/retriever_v8.py",
+      "bytes": 29961,
+      "sha256": "5a1ca32a75c11d941d48ed52e13b5d82e919a77216e13b91a37518553ed3db7f"
+    },
+    {
+      "path": "rag_project/upstream/minicpm_2026-10-20/v2/scripts/minicpm_joint_router_prompt_v1.txt",
+      "bytes": 8256,
+      "sha256": "4584aa7b5a03d0783e25b8b97cf0de6b9d3dd8bc7e6f65dbd44f0aa36edccf30"
+    },
+    {
+      "path": "rag_project/upstream/qwen_v4_2026-10-16/SYSTEM_PROMPT_V4.txt",
+      "bytes": 8308,
+      "sha256": "5b532906f8fef5c64d627a99002f261ab0797b77d4a6f2120dd15b4f17a0284b"
+    },
+    {
+      "path": "README.md",
+      "bytes": 12244,
+      "sha256": "818d2625c2e9bb5507d5107f02368255c586980c212a9cbd6dcc9b42ea8e9dd2"
+    },
+    {
+      "path": "requirements-gradio.txt",
+      "bytes": 199,
+      "sha256": "4d840f88767c0d1b738c3af24f1f3b2bc8d0d5c02c807a9410c97bce1889d503"
+    },
+    {
+      "path": "requirements/server-observed.txt",
+      "bytes": 358,
+      "sha256": "9f2c46064bfa329006b555793355b05949a6c20a2a16012edec9c03486f71e4f"
+    },
+    {
+      "path": "run.py",
+      "bytes": 2574,
+      "sha256": "3a4bf961986446949809ff3552208c7b6244bfec7120309e0723d462eb06389a"
+    },
+    {
+      "path": "scripts/audit_source.py",
+      "bytes": 4219,
+      "sha256": "9e27118f58ae74786e01051943ffe01802b5d22b4928c07ca836114ae9789d2b"
+    },
+    {
+      "path": "scripts/check_dependencies.py",
+      "bytes": 1160,
+      "sha256": "697c7e2170d6a5f3bbf503e43b35196ad12766f978e72c5f342f2b2a16fd67df"
+    },
+    {
+      "path": "scripts/inspect_server_assets.py",
+      "bytes": 5791,
+      "sha256": "c989773d306a0100a5d48f119d8d05e0cc9f3612b6b51d372db0e2cab65abc97"
+    },
+    {
+      "path": "scripts/link_server_assets.py",
+      "bytes": 4930,
+      "sha256": "3eef0bc611c2c650ef7ff0f558de10051627c483af9034dd232426ff160b3ffb"
+    },
+    {
+      "path": "scripts/pack_classifier_assets.py",
+      "bytes": 2191,
+      "sha256": "1af81cfc58b3ad9193a9716e3a9811873ab5c5e21351af1416038468666491d8"
+    },
+    {
+      "path": "scripts/run_account_memory.py",
+      "bytes": 3549,
+      "sha256": "d2ee17affd59b5cedba8b6aa0023559ada426525b706e17c48e33db1d916c988"
+    },
+    {
+      "path": "setup_linux.sh",
+      "bytes": 694,
+      "sha256": "04f0750fe05098f99545d139bb23c1ce16ed89da1712003b2188f9d54a5827db"
+    },
+    {
+      "path": "src/mental_health_pipeline/__init__.py",
+      "bytes": 601,
+      "sha256": "72c104a8c8fedbc08a27454c4f4932639536db1f78c5334761d66891ae818ad7"
+    },
+    {
+      "path": "src/mental_health_pipeline/account_api.py",
+      "bytes": 12185,
+      "sha256": "2c720087fcc3f02d27e17f5a746f837cbbce7fba2cab502583294088a0cd7604"
+    },
+    {
+      "path": "src/mental_health_pipeline/account_preferences.py",
+      "bytes": 1825,
+      "sha256": "2763dc64b84aa3cd25c8740385b05759ebc35a8c56146205f0884af67f640b9f"
+    },
+    {
+      "path": "src/mental_health_pipeline/account_service.py",
+      "bytes": 5056,
+      "sha256": "35fb34bc27919989fe4a92c9ebf1a41b16117560b776f349daf1779dd017d19d"
+    },
+    {
+      "path": "src/mental_health_pipeline/account_store.py",
+      "bytes": 15386,
+      "sha256": "e468b9d33424448acb0cd3c56b277fe8c32838c64059cccc6bfd47457cceaa16"
+    },
+    {
+      "path": "src/mental_health_pipeline/account_web_ui.py",
+      "bytes": 10542,
+      "sha256": "22b37641e4a30dcf2a13b4f984c53982a6d1090c324fc2605f4dfde1feb71f3e"
+    },
+    {
+      "path": "src/mental_health_pipeline/api.py",
+      "bytes": 22979,
+      "sha256": "8f288cafaf331b044b1217fd3d8ca5d94bfabd938383198e6cfd36c45dc92fdd"
+    },
+    {
+      "path": "src/mental_health_pipeline/artifacts.py",
+      "bytes": 5036,
+      "sha256": "55d80f50a9b1fd2dafe64e150de7b70649623ea24747240c00a3ae669aa91353"
+    },
+    {
+      "path": "src/mental_health_pipeline/bootstrap.py",
+      "bytes": 11473,
+      "sha256": "a5202d495c47489eb84266456400e1cb7bfdb46dd9d4e5b726c6622f16c95a82"
+    },
+    {
+      "path": "src/mental_health_pipeline/boundary_policy_text.py",
+      "bytes": 932,
+      "sha256": "3bf89ed543da5b4b1b33ed9410fcf748ec8bbb700dd9b1c21230b5a28fc5a538"
+    },
+    {
+      "path": "src/mental_health_pipeline/boundary_policy.py",
+      "bytes": 5096,
+      "sha256": "101b79c50f26ca3928acc089c4f683e5430f3a5d1d0b1591dba54eddf8e2fc61"
+    },
+    {
+      "path": "src/mental_health_pipeline/cli.py",
+      "bytes": 7348,
+      "sha256": "6a5ac98bf96a1d1b655baf7bd07ca44711a83e58738a6749f278c43d359dba54"
+    },
+    {
+      "path": "src/mental_health_pipeline/combined_output_experiment.py",
+      "bytes": 5033,
+      "sha256": "1d2f3d33f3cc32a2dff5d03266eb44752aa466d0c9dd9532aed8cb163229ec2e"
+    },
+    {
+      "path": "src/mental_health_pipeline/config.py",
+      "bytes": 23673,
+      "sha256": "772b3935d13906bdeb72bc8ef544d4c2b7968664cac000e32970b8748a2b079b"
+    },
+    {
+      "path": "src/mental_health_pipeline/contact_display.py",
+      "bytes": 5013,
+      "sha256": "e509b941eb09aa14ac456a1a4ef5c195c8e94f95ae8a43a00f382a8ab20dfcdc"
+    },
+    {
+      "path": "src/mental_health_pipeline/conversation_quality.py",
+      "bytes": 6572,
+      "sha256": "7003374e36131a6198054933c68207c90b7fe17d829ba82df7349975123fa5c4"
+    },
+    {
+      "path": "src/mental_health_pipeline/conversation_store.py",
+      "bytes": 2353,
+      "sha256": "c2f7fa605875b3ff9c539bf12986d87faa759843864a52edb763dd10944d4dd4"
+    },
+    {
+      "path": "src/mental_health_pipeline/experimental_rewrite.py",
+      "bytes": 3643,
+      "sha256": "5ae249b9a8031704018c2cdc69c2591354d7d8e391b74d14856aa8dc49d1c9fd"
+    },
+    {
+      "path": "src/mental_health_pipeline/fresh_crisis.py",
+      "bytes": 8925,
+      "sha256": "24f6fe4b3deb6e27675b748e9730821823a645b787b8ca4de36cb716324e48cc"
+    },
+    {
+      "path": "src/mental_health_pipeline/generation.py",
+      "bytes": 40321,
+      "sha256": "ec4886dbbce58d1a72f70476ea225c53a4b0832fbffb02dcf89e24b1f65656a2"
+    },
+    {
+      "path": "src/mental_health_pipeline/gradio_app.py",
+      "bytes": 11002,
+      "sha256": "21a5ddceed1d457095997d2d7034adee3572e2e05786745a92dafedeccaf8908"
+    },
+    {
+      "path": "src/mental_health_pipeline/guardrails.py",
+      "bytes": 13166,
+      "sha256": "27d3c98fc0c46c5f884e25c02979f5c147cbe8ba0d908fd9328eddba99fc6503"
+    },
+    {
+      "path": "src/mental_health_pipeline/hybrid_output.py",
+      "bytes": 4628,
+      "sha256": "a9f4cf35e5c3f10012a32780632ab7afd92f59353c87efa87154bc707e1422bb"
+    },
+    {
+      "path": "src/mental_health_pipeline/incremental_output.py",
+      "bytes": 2856,
+      "sha256": "d82ff0618207c85d59ea22d2cfaee8625d04d431ed1bba9b17c2a11d877daf6a"
+    },
+    {
+      "path": "src/mental_health_pipeline/local_output_rules.py",
+      "bytes": 5086,
+      "sha256": "317fc1845b0a0cdc2261448186b2e9af98a255ec85cc38bdb563d54223108df4"
+    },
+    {
+      "path": "src/mental_health_pipeline/local_output.py",
+      "bytes": 20259,
+      "sha256": "fc016e6b48beb70351a3c2d93a8d3c75524626df1cd99f10c57ab57ca60b14a9"
+    },
+    {
+      "path": "src/mental_health_pipeline/medical_output_rules.py",
+      "bytes": 2177,
+      "sha256": "3b1dd72cfd6d6b4297627e8d1e671673727ae94ff27400c7452fdfb0b18a88a4"
+    },
+    {
+      "path": "src/mental_health_pipeline/minicpm_output_experiment.py",
+      "bytes": 4883,
+      "sha256": "cf70947218e4c21ace3a659207c2ebd84b028f5c6e9429be4cd384fdb4d29f9e"
+    },
+    {
+      "path": "src/mental_health_pipeline/minicpm_router.py",
+      "bytes": 6042,
+      "sha256": "f954c5d7298689b41e78d0f1037f6716707988a38497221a446ec199d25fc71e"
+    },
+    {
+      "path": "src/mental_health_pipeline/new_components.py",
+      "bytes": 3509,
+      "sha256": "68e8776efb6b3a8eff2900b6bbc309aebacfa9fcfdadd93aefaaddca560b6611"
+    },
+    {
+      "path": "src/mental_health_pipeline/orchestrator.py",
+      "bytes": 34616,
+      "sha256": "4663d9f50c469946d7bdfa06f1ba3926801407a79029e7e46655066c39f6ecbf"
+    },
+    {
+      "path": "src/mental_health_pipeline/output_comparison_cases.py",
+      "bytes": 6586,
+      "sha256": "57a9c8b1774247e284b3ed1276c27387695aa85765888725901d39a2337c9dfd"
+    },
+    {
+      "path": "src/mental_health_pipeline/output_contacts.py",
+      "bytes": 940,
+      "sha256": "37d5945c67f672518521d5fd09cd2314b6c0253f8b82b741093ab6951d487cd5"
+    },
+    {
+      "path": "src/mental_health_pipeline/output_guard.py",
+      "bytes": 18688,
+      "sha256": "31d82b845db722e4e27a3c341cc07385627f761e18e77ed29688b4ae0b5144a8"
+    },
+    {
+      "path": "src/mental_health_pipeline/output_integration.py",
+      "bytes": 3688,
+      "sha256": "eea5b1c22b2fb15834e443939238bc448ab2dfd030e193502ff99f7606492b53"
+    },
+    {
+      "path": "src/mental_health_pipeline/output_lab.py",
+      "bytes": 7208,
+      "sha256": "ef324b5ee447fbae9c61fbcd244693dd931122ad81178f0d2dca55811584dd1d"
+    },
+    {
+      "path": "src/mental_health_pipeline/output_training_data.py",
+      "bytes": 14323,
+      "sha256": "0b3921a106267ba5c22d50deb01f13b382f81908e5c796f83c0e05af4235d121"
+    },
+    {
+      "path": "src/mental_health_pipeline/paragraph_output_cases.py",
+      "bytes": 5931,
+      "sha256": "95a3c62a7afdcbfe9049a78bdf544f2f1f092b08eab0dbb4cc999284b36245ca"
+    },
+    {
+      "path": "src/mental_health_pipeline/paragraph_output_data.py",
+      "bytes": 9963,
+      "sha256": "1793fb7c6f3f0fb5a897ed18d4f632b3c2673a136ce9a3f8dd480fcbc43d2868"
+    },
+    {
+      "path": "src/mental_health_pipeline/paragraph_output_model.py",
+      "bytes": 3990,
+      "sha256": "c256cbd491f4cf0c799bebc3912fd91389b584608923d921a65969368adf10f4"
+    },
+    {
+      "path": "src/mental_health_pipeline/parallel_execution.py",
+      "bytes": 3122,
+      "sha256": "0fbb15e96f579884d7030880861fb675bb93b0a8d7d2768f56ab7adac94bd22b"
+    },
+    {
+      "path": "src/mental_health_pipeline/personal_memory.py",
+      "bytes": 5654,
+      "sha256": "eb42d298c6c5b7c8bc9a5ceb237f53b5bae90bc6925af76731c28d6e308e2162"
+    },
+    {
+      "path": "src/mental_health_pipeline/phoenix.py",
+      "bytes": 9133,
+      "sha256": "c235ac4dd1a44ad979a91464a4f57048b1aaa54c35cab883bc36dafe12e3330a"
+    },
+    {
+      "path": "src/mental_health_pipeline/query_semantics.py",
+      "bytes": 4639,
+      "sha256": "60a8f30cf1176f1ca0018550b9e8fe1aaecc9431d90e0b22a99d99de7354f72f"
+    },
+    {
+      "path": "src/mental_health_pipeline/qwen_free_data.py",
+      "bytes": 14039,
+      "sha256": "0d8dccc2ef341a9a0c8c5f4c623fe9d5e7745c6e19d004e5db1252a43961802c"
+    },
+    {
+      "path": "src/mental_health_pipeline/qwen_free_output.py",
+      "bytes": 12499,
+      "sha256": "6a570a198c6258723714d98fb3583ed35d0e4f51a6db8db44da1cd7747e64903"
+    },
+    {
+      "path": "src/mental_health_pipeline/qwen_only_output.py",
+      "bytes": 1404,
+      "sha256": "05a2d0f4eba233095f3431e67297fa0b27af870ed53596e4e3ac688797cf3655"
+    },
+    {
+      "path": "src/mental_health_pipeline/qwen_router.py",
+      "bytes": 8780,
+      "sha256": "f26774b789407d86a515958b8e9541ddd79fc4397bea59b9cc3ce63effafd79f"
+    },
+    {
+      "path": "src/mental_health_pipeline/rag.py",
+      "bytes": 32283,
+      "sha256": "f5c7987789bd5e8d4818354a2ffa972fdbaebb93f9c7946e5e4f48053dd6cef1"
+    },
+    {
+      "path": "src/mental_health_pipeline/readiness.py",
+      "bytes": 11601,
+      "sha256": "29f63cfac2819e2a198f26b1e6529024175a399386c09caa02601c627b018edb"
+    },
+    {
+      "path": "src/mental_health_pipeline/resources.py",
+      "bytes": 21310,
+      "sha256": "8ac326ab4be703998e5caf27bf2bfead259d0205b2c7bb71799dc5d67ffc1f15"
+    },
+    {
+      "path": "src/mental_health_pipeline/response_policy/__init__.py",
+      "bytes": 2079,
+      "sha256": "df80c06eadc0c136496f044f9c9fd69b0079dfd943ea803f1d03e9c72e022e32"
+    },
+    {
+      "path": "src/mental_health_pipeline/response_policy/builder.py",
+      "bytes": 18251,
+      "sha256": "ec8f07494b6142ec07f241035784dfbd65ffd78d756fe6e36296a9cb5b1a56df"
+    },
+    {
+      "path": "src/mental_health_pipeline/response_policy/compose.py",
+      "bytes": 40393,
+      "sha256": "6cee65efcc9bfba27b9a4f8578fd355650370d2be2b997c4bead2504beffd4f5"
+    },
+    {
+      "path": "src/mental_health_pipeline/response_policy/fallback_templates.py",
+      "bytes": 8247,
+      "sha256": "35444d68e3a612975dce1168bdfed52bd172d1ccc6b8d0bf21d661da899a21b3"
+    },
+    {
+      "path": "src/mental_health_pipeline/response_policy/output_contract.py",
+      "bytes": 5457,
+      "sha256": "11258f0e0d2ad31e08fa20d63b74d78551593d29c181ac0307dd39fb879f78db"
+    },
+    {
+      "path": "src/mental_health_pipeline/response_policy/render.py",
+      "bytes": 25891,
+      "sha256": "139a1856010a85b86f44a3b4e7a18cb05e0f4724a465d9805c7acfeb49ad99e3"
+    },
+    {
+      "path": "src/mental_health_pipeline/response_policy/schemas.py",
+      "bytes": 8159,
+      "sha256": "e83e5864a628395d0b4376c32c7eff1e7b5f01078b183c197b880b4a3a7337bf"
+    },
+    {
+      "path": "src/mental_health_pipeline/response_policy/session_state.py",
+      "bytes": 10805,
+      "sha256": "2b2937d462c4d7cb8ab972ca04f97fda9e23a8502749af5461e5c75ab461e4d1"
+    },
+    {
+      "path": "src/mental_health_pipeline/response_policy/situation_codes.py",
+      "bytes": 13868,
+      "sha256": "9a1e738a13a8874ba7c5667699067834620bf26c2d9b1a2b9ea7a12f4b64dcb8"
+    },
+    {
+      "path": "src/mental_health_pipeline/retrieval_recovery.py",
+      "bytes": 1442,
+      "sha256": "eed00bcd44f76ecbae93da7f6d92adf327794eb0a0df89e0e0d2cba03795f4a8"
+    },
+    {
+      "path": "src/mental_health_pipeline/routing.py",
+      "bytes": 2417,
+      "sha256": "fb4f1e26e4f07897bc5527ab99717e958c1ecf5222eb3a319280f4ac4bde1b68"
+    },
+    {
+      "path": "src/mental_health_pipeline/schemas.py",
+      "bytes": 13424,
+      "sha256": "afbae215bf25923c6c2cd07d2e9ba95e18137b50b929f91c7d4f3202aa2b0bef"
+    },
+    {
+      "path": "src/mental_health_pipeline/session_store.py",
+      "bytes": 3321,
+      "sha256": "79090bce550135c003811095481c6307cb08528e26bb6acb6e36d03ecea9898d"
+    },
+    {
+      "path": "src/mental_health_pipeline/telemetry.py",
+      "bytes": 3452,
+      "sha256": "67eecb142224fae1a925af26d97581e740acd125b18cfe430e0f11baee23c34c"
+    },
+    {
+      "path": "src/mental_health_pipeline/testing_console.py",
+      "bytes": 12268,
+      "sha256": "cd5405ade08ef12af36ceec6e344e41cb593ad90018550af50d7a28e22a84812"
+    },
+    {
+      "path": "src/mental_health_pipeline/transcription.py",
+      "bytes": 2542,
+      "sha256": "b957d6c983d4aa26e2001a3808569b12604ba06a9489cf25c3aa37e60b46e432"
+    },
+    {
+      "path": "src/mental_health_pipeline/web_nora/app.js",
+      "bytes": 38254,
+      "sha256": "5b11ee3d947904be24c357f542fa1d7fa5d9281bd49e920dc05d397835d6dc75"
+    },
+    {
+      "path": "src/mental_health_pipeline/web_nora/assets/nora-avatars.png",
+      "bytes": 2183302,
+      "sha256": "30e75e232fe07316e3fb0b7784378a1612daa2f8fb681757e1051ea41e2c50f0"
+    },
+    {
+      "path": "src/mental_health_pipeline/web_nora/assets/nora-logo.png",
+      "bytes": 522208,
+      "sha256": "ebf6db031209f250e4f790935f264f88edae193bc6916f5644e981cbd396e5e5"
+    },
+    {
+      "path": "src/mental_health_pipeline/web_nora/assets/resource-reading.jpg",
+      "bytes": 236727,
+      "sha256": "d703c81f07b4190048716f9c4a8fbac50f4bc7a896390ae6cc94820799c42d97"
+    },
+    {
+      "path": "src/mental_health_pipeline/web_nora/assets/resource-reflection.jpg",
+      "bytes": 136429,
+      "sha256": "36a586c02eb3edaae0a72ca2d7c5ac61d8f00a4db3d3e3a9f6313c1f63fd695d"
+    },
+    {
+      "path": "src/mental_health_pipeline/web_nora/assets/resource-sleep.jpg",
+      "bytes": 91455,
+      "sha256": "08aa5073dd03c1a28772c784a2141918ca9a743afe15acdd99af1caafba1fda1"
+    },
+    {
+      "path": "src/mental_health_pipeline/web_nora/assets/video-sleep.jpg",
+      "bytes": 26442,
+      "sha256": "7157ea68f741bfb33beb8eeed83870ace4b6be98bb0abf8e1e860889225e0e02"
+    },
+    {
+      "path": "src/mental_health_pipeline/web_nora/assets/video-stress.jpg",
+      "bytes": 23557,
+      "sha256": "afe6c0b842d2f2eb138cd3d3981e6266551909ecd65c09f26ae97f08aa08b963"
+    },
+    {
+      "path": "src/mental_health_pipeline/web_nora/connection.js",
+      "bytes": 27978,
+      "sha256": "377964d56008cfaeefb0466678cfe8694a3797aa10ee9398ad296e6f0537bfaf"
+    },
+    {
+      "path": "src/mental_health_pipeline/web_nora/index.html",
+      "bytes": 2529,
+      "sha256": "8db354116feba4c893fe218d8ddd459fa77b8982481c38c2d37ff050a62e72ce"
+    },
+    {
+      "path": "src/mental_health_pipeline/web_nora/styles.css",
+      "bytes": 37783,
+      "sha256": "1cd087d55cbd5061c61579a99efc1858599a0b776357f2935390f47c818f7dc0"
+    },
+    {
+      "path": "src/mental_health_pipeline/web_ui.py",
+      "bytes": 7298,
+      "sha256": "51584f9e34509475db66654cdf0fe2e58e058cd51dc0707ee52df7811db10beb"
+    },
+    {
+      "path": "src/mental_health_pipeline/worker_client.py",
+      "bytes": 11348,
+      "sha256": "6851265e4a202f3959e3868570905f85bc795ec240c4a62aa69deaacaea616e8"
+    },
+    {
+      "path": "src/mental_health_pipeline/workers/__init__.py",
+      "bytes": 53,
+      "sha256": "ae8750a5c210c97a5aaadf1424450614cdb42a010c0351383ef7658c54116c7c"
+    },
+    {
+      "path": "src/mental_health_pipeline/workers/boundary_final.py",
+      "bytes": 811,
+      "sha256": "88d2d7a79959460567e8c8ef782b8a5b94a0a9f9d4d8b3c84afd40bce4605acb"
+    },
+    {
+      "path": "src/mental_health_pipeline/workers/boundary.py",
+      "bytes": 1065,
+      "sha256": "04e2b464a3532f36dc1ad9122e3407ed69c6ee39491435f8c358f18795a237af"
+    },
+    {
+      "path": "src/mental_health_pipeline/workers/common.py",
+      "bytes": 2692,
+      "sha256": "ab81e5c5fb1fbacdea8adf85a1cefa35e817a68c2d7b6160241b9efb58adcccd"
+    },
+    {
+      "path": "src/mental_health_pipeline/workers/crisis.py",
+      "bytes": 2469,
+      "sha256": "fd6f07fb49e8f69096c4988d4f0cd312d9a9279f693b2ec0334119dda2841cb0"
+    },
+    {
+      "path": "src/mental_health_pipeline/workers/local_output.py",
+      "bytes": 2212,
+      "sha256": "1275432fe179c7e46f1681ab3f6194421385ebd2bb194851607484306f6293d7"
+    },
+    {
+      "path": "src/mental_health_pipeline/workers/output.py",
+      "bytes": 3541,
+      "sha256": "bdef1b2c13ffa08da47c49ac6edf9ac323742bded5108da864beaa6113d9b6c3"
+    },
+    {
+      "path": "src/mental_health_pipeline/workers/testing.py",
+      "bytes": 1240,
+      "sha256": "ed6aa3e4e6f2b73f2d1fd6b8bd2424918bc56c2f7caae6a0afff4ced0a1adfa9"
+    },
+    {
+      "path": "tests/account_ui_contracts.cjs",
+      "bytes": 4294,
+      "sha256": "b72bd57015fd38fa3fa506dc1738847e27734fdb5ae409960cf7a1461fe14807"
+    },
+    {
+      "path": "tests/nora_ui_contracts.cjs",
+      "bytes": 7237,
+      "sha256": "e4fede00ec6a3da965e392e3a66d43278cd41307faad74c883506e8566ca7785"
+    },
+    {
+      "path": "tests/test_account_hardening.py",
+      "bytes": 10463,
+      "sha256": "50d32d1559cbfdaab0f89b4fd7120bff10474e39c29e0f228801e80526e6913c"
+    },
+    {
+      "path": "tests/test_account_live_http.py",
+      "bytes": 4493,
+      "sha256": "a4d0eb831ae96eaaf9387943d6e75d6284444785f1ea967b95c71663cbf8d8c2"
+    },
+    {
+      "path": "tests/test_account_memory.py",
+      "bytes": 17543,
+      "sha256": "a8c4325ff8b8a8f2b397fe38a98cc51aa94cd6cd1249170c02166fe35c06dd11"
+    },
+    {
+      "path": "tests/test_account_ui_contracts.py",
+      "bytes": 573,
+      "sha256": "7bff6c711c1fb2e15514fac438f973eaee3594711bba3a7f6070ac12d4dfcd08"
+    },
+    {
+      "path": "tests/test_conditional_prompt.py",
+      "bytes": 8074,
+      "sha256": "59f273f01264e9ead69fe452fbd6ca3452c7fa90c0895b414a68c2e191109171"
+    },
+    {
+      "path": "tests/test_conversation_accuracy.py",
+      "bytes": 14686,
+      "sha256": "51e94fd2ada12af74d998d4f5bdf2455cfd97f8db6eed4e5f4a7dd01e31dd442"
+    },
+    {
+      "path": "tests/test_conversation_repair.py",
+      "bytes": 6031,
+      "sha256": "22e1e224f3f3b1330e629b9ba2e60ca808af39e308d06abc5cf0baabccee1108"
+    },
+    {
+      "path": "tests/test_new_release.py",
+      "bytes": 8795,
+      "sha256": "449562fc44cd2c4c1779f0c103c113345660635b18d4b28c15e3b1df2da7a1df"
+    },
+    {
+      "path": "tests/test_nora_integration.py",
+      "bytes": 5957,
+      "sha256": "0f77970c8e8f0690c92cbbafec14e56a34f04ec8a1adb744051854225fa1bcc5"
+    },
+    {
+      "path": "tests/test_orchestrator.py",
+      "bytes": 6500,
+      "sha256": "0e25c51d357e5555c1b0d30ef5725a2da023e91dfe801fee10cf0b3cacf6cd97"
+    },
+    {
+      "path": "tests/test_output_contacts.py",
+      "bytes": 2515,
+      "sha256": "8c323ff9d4bffe396e8ee3db507eccf3d7eb146c23ceeb6bc31d6168e568e033"
+    },
+    {
+      "path": "tests/test_output_guard.py",
+      "bytes": 5444,
+      "sha256": "f1ef5c2ccc2a12663f3ecaa7e0505ee7cb63775e57a50900dac21d62c02c8a63"
+    },
+    {
+      "path": "tests/test_packaged_components.py",
+      "bytes": 1096,
+      "sha256": "4abd50b80e6f5c652f8c38ee2d8be5d75d1fbe52b7d024a006ed463911c99c4c"
+    },
+    {
+      "path": "tests/test_qwen_router.py",
+      "bytes": 13968,
+      "sha256": "e8f64e78dc88fb8e40c62c12d470678d444eade2caa9879c565cd59a5bcd7d15"
+    },
+    {
+      "path": "tests/test_rag_generation.py",
+      "bytes": 14738,
+      "sha256": "c5300d384cf58ad7bf8656f90fd5ff89cfb7ce088fa32feff351d7cdb3f212b6"
+    },
+    {
+      "path": "tests/test_resources.py",
+      "bytes": 6285,
+      "sha256": "733d08bc3481f4525aabe48c74ab8c6c53bc7e156292c5967af06a40499491dd"
+    },
+    {
+      "path": "tests/test_response_policy_builder.py",
+      "bytes": 9060,
+      "sha256": "a65922211e35fd623352c7920cf354cc49e85e97dec4dcc4fe12f1009437c699"
+    },
+    {
+      "path": "tests/test_response_policy_situation_codes.py",
+      "bytes": 5784,
+      "sha256": "eb3f85f78a6e6e974efd88bc545edebb3c34aeff36e5614bc0716f1d8879bce2"
+    },
+    {
+      "path": "tests/test_schemas.py",
+      "bytes": 1158,
+      "sha256": "b245ed2d3b722f8f3f4220402fd359998743bccb594e6dfe908f03afbdf0eb8b"
+    },
+    {
+      "path": "tests/test_server_assets.py",
+      "bytes": 3349,
+      "sha256": "69df262021c2135a0e293e24769a3b2714dbf3e43d47580fea3fcc6ff688f268"
+    },
+    {
+      "path": "tests/test_session_store.py",
+      "bytes": 1055,
+      "sha256": "b9fd1bb38b740a05c27c2245e70ef85513b9c892a297383133dc67b86d74cce7"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "bytes": 1472,
+      "sha256": "b643814ac8c17cfd7faa3578e2c582fb9b9ae695aa8ce47c952580464a0d8dbe"
+    }
+  ]
+}

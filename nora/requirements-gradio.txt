@@ -1,0 +1,4 @@
+# UI only: this does not install Torch, classifier weights or another environment.
+gradio==6.30.0
+# Preserve the pipeline's existing Hugging Face Hub major-version contract.
+huggingface-hub>=1.16,<2

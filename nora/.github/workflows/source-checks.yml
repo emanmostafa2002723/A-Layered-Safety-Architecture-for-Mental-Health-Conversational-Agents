@@ -1,0 +1,19 @@
+name: Source-only checks
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  source:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: python scripts/audit_source.py
+      - run: pip install -e '.[test]' numpy
+      - name: Account and policy software contracts, no model downloads
+        run: PYTHONPATH=src pytest -q tests/test_account_memory.py tests/test_account_hardening.py tests/test_account_live_http.py tests/test_account_ui_contracts.py tests/test_nora_integration.py tests/test_schemas.py tests/test_response_policy_builder.py tests/test_response_policy_situation_codes.py tests/test_session_store.py tests/test_resources.py tests/test_server_assets.py
