@@ -17,7 +17,7 @@ cd /home/jovyan/nora-current/nora
 python scripts/audit_source.py
 ```
 
-Do not run this clone over an existing directory. The current application lives in the repository's `nora/` subfolder; run the remaining commands there. A private repository requires your own GitHub authentication; never paste a token into shared terminal output or chat. Do not initialize or import the separate `wellbeing_agent` submodule for this application.
+Do not run this clone over an existing directory. The current application lives in the repository's `nora/` subfolder; run the remaining commands there. A private repository requires your own GitHub authentication; never paste a token into shared terminal output or chat. No external application submodule is required.
 
 ## 2. Connect existing assets
 

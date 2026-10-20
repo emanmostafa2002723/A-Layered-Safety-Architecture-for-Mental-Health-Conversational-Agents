@@ -1,8 +1,3 @@
-# wellbeing-guardrails
-Layered safety guardrails for the WellBeing Agent - Queen's University    Visibility: Private (keep your work private)
-
----
-
 <div align="center">
 
 <img src="nora/src/mental_health_pipeline/web_nora/assets/nora-logo.png" width="100" alt="NORA logo">
@@ -51,13 +46,6 @@ corpus-dependent skips. GitHub's **Linux / Python 3.12** submission checks
 passed **182 account, interface, policy and asset-restoration tests**, plus
 the reviewed source-file integrity check. These checks do not load the
 learned models or replace server inference and clinical acceptance tests.
-
-## Existing WellBeing Agent reference
-
-The original [`wellbeing_agent`](wellbeing_agent) submodule and its Git settings
-are preserved. It is separate from the current NORA implementation; it is not
-automatically imported or used as its runtime code. Cloning NORA does not
-require recursively downloading that submodule.
 
 > **Safety and release status:** NORA is an AI companion, not a human therapist,
 > diagnostic service or emergency service. This integration supports private

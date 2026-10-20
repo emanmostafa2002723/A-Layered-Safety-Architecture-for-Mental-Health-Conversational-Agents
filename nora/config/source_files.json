@@ -434,8 +434,8 @@
     },
     {
       "path": "docs/SERVER_SETUP.md",
-      "bytes": 5865,
-      "sha256": "0551ec084b721f80a4a653d78e98cf35925460c43ba24c968d97c45c0ccec5d2"
+      "bytes": 5821,
+      "sha256": "f3ea65115a51f9743b800cf20c4651f836eec06a32a49f9fe0595df29cbbe88b"
     },
     {
       "path": "docs/SOURCE_EXPORT_VERIFICATION.md",
@@ -474,8 +474,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 12244,
-      "sha256": "818d2625c2e9bb5507d5107f02368255c586980c212a9cbd6dcc9b42ea8e9dd2"
+      "bytes": 12191,
+      "sha256": "080dcc7b2d14cfdf8186562cc71203609d1d783baf509c921368fc67d1f48e9a"
     },
     {
       "path": "requirements-gradio.txt",
