@@ -1,7 +1,7 @@
 {
-  "version": "v6",
-  "version_key": "phoenix_v6",
-  "notebook": "notebooks/phoenix_v6_retrain_lora.ipynb",
+  "version": "v5",
+  "version_key": "phoenix_v5",
+  "notebook": "notebooks/phoenix_v5_retrain_lora.ipynb",
   "notebook_sha256": "9ed7c17f2c24ec5a0ce0b936e124c3834b07dfe829b887b1fd87d763462e3c8c",
   "training_recipe": {
     "base_model": "mistralai/Mistral-7B-Instruct-v0.3",
@@ -47,7 +47,7 @@
   "expected_eval_loss": null,
   "expected_training_minutes": null,
   "adapter_sha256": "7742bb3438fb53c34862d88c031d2f8e5da2f0ceaff52c693804d570a9769da0",
-  "report_reference": "Section 4.10 (lineage), Section 5.6 Table 15 (V5 vs V6 matched comparison), Appendix C1 (adapter SHA-256)",
+  "report_reference": "Section 4.10 (lineage), Section 5.6 Table 15 (V4 vs V5 matched comparison), Appendix C1 (adapter SHA-256)",
   "release_status": "selected_for_local_pipeline",
   "production_authorized": false,
   "prepared_at": "2026-10-20T23:04:13Z"

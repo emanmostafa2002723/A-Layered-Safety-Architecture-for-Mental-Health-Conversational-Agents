@@ -1,7 +1,7 @@
 {
-  "version": "v4",
-  "version_key": "phoenix_v4",
-  "notebook": "notebooks/phoenix_v4_retrain_lora.ipynb",
+  "version": "v3",
+  "version_key": "phoenix_v3",
+  "notebook": "notebooks/phoenix_v3_retrain_lora.ipynb",
   "notebook_sha256": "0432a7ee05c647afefef19f2f0e179a0722ac5a7c0884e33b90e386f5de8d1e7",
   "training_recipe": {
     "base_model": "mistralai/Mistral-7B-Instruct-v0.3",
@@ -47,7 +47,7 @@
   "expected_training_minutes": 57.6,
   "adapter_sha256": null,
   "report_reference": "Section 4.10 (lineage), Section 5.10 Table 15 (built-in panel results), Appendix C1",
-  "release_status": "intermediate (superseded by v5 then v6)",
+  "release_status": "intermediate (superseded by v4 then v5)",
   "production_authorized": false,
   "prepared_at": "2026-10-20T23:04:13Z"
 }

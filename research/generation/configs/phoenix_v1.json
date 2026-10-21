@@ -1,7 +1,7 @@
 {
-  "version": "v2",
-  "version_key": "phoenix_v2",
-  "notebook": "notebooks/phoenix_v2_retrain_lora.ipynb",
+  "version": "v1",
+  "version_key": "phoenix_v1",
+  "notebook": "notebooks/phoenix_v1_retrain_lora.ipynb",
   "notebook_sha256": "94a186eb11316408629a873887ce1e7f99e9aba6fe64ef64b4024e36f6b4fbef",
   "training_recipe": {
     "base_model": "mistralai/Mistral-7B-Instruct-v0.3",

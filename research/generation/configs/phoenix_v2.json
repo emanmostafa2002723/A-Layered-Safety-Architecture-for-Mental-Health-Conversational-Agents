@@ -1,7 +1,7 @@
 {
-  "version": "v3",
-  "version_key": "phoenix_v3",
-  "notebook": "notebooks/phoenix_v3_retrain_lora.ipynb",
+  "version": "v2",
+  "version_key": "phoenix_v2",
+  "notebook": "notebooks/phoenix_v2_retrain_lora.ipynb",
   "notebook_sha256": "a3069bd5c770166e3cdf44066cf25e7f74439f99db185e671d428b30b9dba581",
   "training_recipe": {
     "base_model": "mistralai/Mistral-7B-Instruct-v0.3",
@@ -37,7 +37,7 @@
   "expected_training_minutes": null,
   "adapter_sha256": null,
   "report_reference": "Section 4.10 (lineage), Section 5.10 Table 14 (paired v3 subsystem study), Section 5.10 Table 15 (v3 Sentinel failures)",
-  "release_status": "historical (used as identity for the v3 RAG study)",
+  "release_status": "historical (reference for the v2 RAG study)",
   "production_authorized": false,
   "prepared_at": "2026-10-20T23:04:12Z"
 }
