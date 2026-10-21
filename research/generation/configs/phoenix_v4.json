@@ -1,8 +1,8 @@
 {
-  "version": "v4",
-  "version_key": "phoenix_v4",
-  "notebook": "notebooks/phoenix_v4_retrain_lora.ipynb",
-  "notebook_sha256": "0432a7ee05c647afefef19f2f0e179a0722ac5a7c0884e33b90e386f5de8d1e7",
+  "version": "v5",
+  "version_key": "phoenix_v5",
+  "notebook": "notebooks/phoenix_v5_retrain_lora.ipynb",
+  "notebook_sha256": "2886cd9f3d0d8f84c9fd31a2f5b219fe55b0699e9f4c2ff324400f1381e18ed5",
   "training_recipe": {
     "base_model": "mistralai/Mistral-7B-Instruct-v0.3",
     "quantization": "4-bit NF4 + double quantization + BF16 compute",
@@ -23,10 +23,10 @@
     "assistant_target_masking": true,
     "chat_template": "tokenizer.apply_chat_template (Mistral v0.3 native)"
   },
-  "principal_change": "Six data-only fixes mapping one-to-one to the six v3 Sentinel failures: (1) IFEval targets generated with base Mistral and rule-checked; (2) 36 crisis-disclosure templates; (3) 5 persona system-prompt variants; (4) 60 benign Q&A pairs; (5) 24 RAG-format examples with citation markers; (6) v2 refusal blocks preserved.",
-  "motivation": "Each of the six v3 Sentinel failures maps directly to one v4 fix. v4 is a one-fix-per-failure release.",
-  "achieved": "6,473 actual training examples, checkpoint at step 1,400, eval_loss 1.4638, 57.6 min training. Built-in panel: 0/20 over-refusal, 0/10 disclosure failures, 8/8 crisis-disclosure resources, 0/8 follow-up pattern hits.",
-  "not_achieved": "Did not address the ESConv-leaked counsellor follow-up pattern (Tell me more about that) that was still present in single-turn Q&A. Teammate review identified this as the most visible v4 regression.",
+  "principal_change": "Removed ESConv entirely from the mixture. Increased CounselChat allocation from 2,500 to 3,500 to compensate. Recipe identical to v4.",
+  "motivation": "ESConv taught a counsellor follow-up pattern (Tell me more about that) that leaked into single-turn Q&A. v4 review showed even simple factual questions sometimes received a counsellor follow-up before the answer.",
+  "achieved": "5,558 actual training examples (ESConv block was 915 actual records despite 6,500 cap). Checkpoint at step 2,600, eval_loss 1.3073, 69.4 min training. Built-in panel preserved 0/20, 0/10, 8/8, 0/8 and eliminated the leaked follow-up pattern. Teammate test: 15/16 completion at 4.34 s median latency.",
+  "not_achieved": "Three v5 issues identified by teammate review: (i) repetitive greeting reply; (ii) no immediate-safety question on suicide disclosure; (iii) unsolicited phone numbers in disclosure responses. One case failed when the model misinterpreted the user's exam-stress follow-up.",
   "mixture_blocks": {
     "counselchat": 2491,
     "beavertails": 1000,
@@ -38,16 +38,15 @@
     "drug_related_safety": 30,
     "benign": 57,
     "crisis_disclosure": 36,
-    "rag_examples": 24,
-    "esconv": "preserved but later removed in v5"
+    "rag_examples": 24
   },
-  "mixture_total": 6473,
-  "expected_checkpoint_step": 1400,
-  "expected_eval_loss": 1.4638,
-  "expected_training_minutes": 57.6,
+  "mixture_total": 5558,
+  "expected_checkpoint_step": 2600,
+  "expected_eval_loss": 1.3073,
+  "expected_training_minutes": 69.4,
   "adapter_sha256": null,
-  "report_reference": "Section 4.10 (lineage), Section 5.10 Table 15 (built-in panel results), Appendix C1",
-  "release_status": "intermediate (superseded by v5 then v6)",
+  "report_reference": "Section 4.10 (lineage), Section 5.10 Table 15 (built-in panel + teammate test), Section 5.6 Table 15 (V5 vs V6 matched comparison)",
+  "release_status": "intermediate (superseded by v6; v6 recommended by teammate review)",
   "production_authorized": false,
   "prepared_at": "2026-10-20T23:04:13Z"
 }

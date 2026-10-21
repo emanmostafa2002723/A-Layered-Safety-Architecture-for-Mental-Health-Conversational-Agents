@@ -1,8 +1,8 @@
 {
-  "version": "v2",
-  "version_key": "phoenix_v2",
-  "notebook": "notebooks/phoenix_v2_retrain_lora.ipynb",
-  "notebook_sha256": "94a186eb11316408629a873887ce1e7f99e9aba6fe64ef64b4024e36f6b4fbef",
+  "version": "v3",
+  "version_key": "phoenix_v3",
+  "notebook": "notebooks/phoenix_v3_retrain_lora.ipynb",
+  "notebook_sha256": "a3069bd5c770166e3cdf44066cf25e7f74439f99db185e671d428b30b9dba581",
   "training_recipe": {
     "base_model": "mistralai/Mistral-7B-Instruct-v0.3",
     "quantization": "4-bit NF4 + double quantization + BF16 compute",
@@ -23,22 +23,21 @@
     "assistant_target_masking": true,
     "chat_template": "tokenizer.apply_chat_template (Mistral v0.3 native)"
   },
-  "principal_change": "Added 50 self-harm-method refusal templates and 30 drug-information refusal templates as small safety blocks. Recipe identical to v1.",
-  "motivation": "v1 Sentinel safety probes found the model provided actionable self-harm methods when asked directly and leaked controlled-drug information when asked for dosage or acquisition details.",
-  "achieved": "Closed both refusal gaps on the small Sentinel probe set (16 method-seeking probes; full pass).",
-  "not_achieved": "Did not address disclosure-handling, citation, or instruction-following issues that v3 would later expose.",
+  "principal_change": "Raised MAX_SEQ_LENGTH from 1,536 to 2,048 tokens to support RAG integration. Added 24 RAG-format examples teaching [source-N] citation markers.",
+  "motivation": "RAG subsystem was integrated after v2 and prompt budget grew to fit evidence + citations. A 1,536-token training sequence was too short to teach the model to attend to evidence at the end of a long prompt.",
+  "achieved": "Supported RAG integration. Used in the controlled RAG study (the 93.5% unsupported-claims reduction reported in Section 5.10).",
+  "not_achieved": "Exposed six defects: (i) IFEval placeholder-pollution bug (memorised hardcoded strings like 'the quick brown fox'); (ii) crisis-disclosure probes 0% pass; (iii) RAG probes 0% citation use; (iv) IFEval 28% pass; (v) over-refusal 7/20; (vi) system-prompt echo.",
   "mixture_blocks": {
-    "refusal_self_harm": 50,
-    "refusal_drug_leak": 30,
-    "preserved_from_v1": "ESConv, CounselChat, IFEval, Dolly, BeaverTails, persona"
+    "preserved_from_v2": "all v2 blocks",
+    "rag_format_examples": 24
   },
-  "mixture_total": "12,080 (arithmetic sum of source blocks)",
+  "mixture_total": "12,080 (sum of source blocks; ESConv 6,500 cap)",
   "expected_checkpoint_step": null,
   "expected_eval_loss": null,
   "expected_training_minutes": null,
   "adapter_sha256": null,
-  "report_reference": "Section 4.10 (lineage), Section 5.10 historical v3 Sentinel results",
-  "release_status": "historical",
+  "report_reference": "Section 4.10 (lineage), Section 5.10 Table 14 (paired v3 subsystem study), Section 5.10 Table 15 (v3 Sentinel failures)",
+  "release_status": "historical (used as identity for the v3 RAG study)",
   "production_authorized": false,
   "prepared_at": "2026-10-20T23:04:12Z"
 }

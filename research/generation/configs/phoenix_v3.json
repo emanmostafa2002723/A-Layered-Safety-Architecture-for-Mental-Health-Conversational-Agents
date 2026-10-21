@@ -1,8 +1,8 @@
 {
-  "version": "v3",
-  "version_key": "phoenix_v3",
-  "notebook": "notebooks/phoenix_v3_retrain_lora.ipynb",
-  "notebook_sha256": "a3069bd5c770166e3cdf44066cf25e7f74439f99db185e671d428b30b9dba581",
+  "version": "v4",
+  "version_key": "phoenix_v4",
+  "notebook": "notebooks/phoenix_v4_retrain_lora.ipynb",
+  "notebook_sha256": "0432a7ee05c647afefef19f2f0e179a0722ac5a7c0884e33b90e386f5de8d1e7",
   "training_recipe": {
     "base_model": "mistralai/Mistral-7B-Instruct-v0.3",
     "quantization": "4-bit NF4 + double quantization + BF16 compute",
@@ -23,21 +23,31 @@
     "assistant_target_masking": true,
     "chat_template": "tokenizer.apply_chat_template (Mistral v0.3 native)"
   },
-  "principal_change": "Raised MAX_SEQ_LENGTH from 1,536 to 2,048 tokens to support RAG integration. Added 24 RAG-format examples teaching [source-N] citation markers.",
-  "motivation": "RAG subsystem was integrated after v2 and prompt budget grew to fit evidence + citations. A 1,536-token training sequence was too short to teach the model to attend to evidence at the end of a long prompt.",
-  "achieved": "Supported RAG integration. Used in the controlled RAG study (the 93.5% unsupported-claims reduction reported in Section 5.10).",
-  "not_achieved": "Exposed six defects: (i) IFEval placeholder-pollution bug (memorised hardcoded strings like 'the quick brown fox'); (ii) crisis-disclosure probes 0% pass; (iii) RAG probes 0% citation use; (iv) IFEval 28% pass; (v) over-refusal 7/20; (vi) system-prompt echo.",
+  "principal_change": "Six data-only fixes mapping one-to-one to the six v3 Sentinel failures: (1) IFEval targets generated with base Mistral and rule-checked; (2) 36 crisis-disclosure templates; (3) 5 persona system-prompt variants; (4) 60 benign Q&A pairs; (5) 24 RAG-format examples with citation markers; (6) v2 refusal blocks preserved.",
+  "motivation": "Each of the six v3 Sentinel failures maps directly to one v4 fix. v4 is a one-fix-per-failure release.",
+  "achieved": "6,473 actual training examples, checkpoint at step 1,400, eval_loss 1.4638, 57.6 min training. Built-in panel: 0/20 over-refusal, 0/10 disclosure failures, 8/8 crisis-disclosure resources, 0/8 follow-up pattern hits.",
+  "not_achieved": "Did not address the ESConv-leaked counsellor follow-up pattern (Tell me more about that) that was still present in single-turn Q&A. Teammate review identified this as the most visible v4 regression.",
   "mixture_blocks": {
-    "preserved_from_v2": "all v2 blocks",
-    "rag_format_examples": 24
+    "counselchat": 2491,
+    "beavertails": 1000,
+    "refusal": 500,
+    "dolly": 500,
+    "verified_instruction_following": 370,
+    "persona": 500,
+    "self_harm_safety": 50,
+    "drug_related_safety": 30,
+    "benign": 57,
+    "crisis_disclosure": 36,
+    "rag_examples": 24,
+    "esconv": "preserved but later removed in v5"
   },
-  "mixture_total": "12,080 (sum of source blocks; ESConv 6,500 cap)",
-  "expected_checkpoint_step": null,
-  "expected_eval_loss": null,
-  "expected_training_minutes": null,
+  "mixture_total": 6473,
+  "expected_checkpoint_step": 1400,
+  "expected_eval_loss": 1.4638,
+  "expected_training_minutes": 57.6,
   "adapter_sha256": null,
-  "report_reference": "Section 4.10 (lineage), Section 5.10 Table 14 (paired v3 subsystem study), Section 5.10 Table 15 (v3 Sentinel failures)",
-  "release_status": "historical (used as identity for the v3 RAG study)",
+  "report_reference": "Section 4.10 (lineage), Section 5.10 Table 15 (built-in panel results), Appendix C1",
+  "release_status": "intermediate (superseded by v5 then v6)",
   "production_authorized": false,
-  "prepared_at": "2026-10-20T23:04:12Z"
+  "prepared_at": "2026-10-20T23:04:13Z"
 }

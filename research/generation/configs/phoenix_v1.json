@@ -1,0 +1,44 @@
+{
+  "version": "v2",
+  "version_key": "phoenix_v2",
+  "notebook": "notebooks/phoenix_v2_retrain_lora.ipynb",
+  "notebook_sha256": "94a186eb11316408629a873887ce1e7f99e9aba6fe64ef64b4024e36f6b4fbef",
+  "training_recipe": {
+    "base_model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "quantization": "4-bit NF4 + double quantization + BF16 compute",
+    "lora_rank": 16,
+    "lora_alpha": 32,
+    "lora_dropout": 0.05,
+    "target_modules": [
+      "q_proj",
+      "v_proj"
+    ],
+    "learning_rate": 0.0001,
+    "epochs": 2,
+    "max_seq_length": 2048,
+    "optimizer": "paged_adamw_8bit",
+    "microbatch": 1,
+    "grad_accum": 4,
+    "weight_decay": 0.01,
+    "assistant_target_masking": true,
+    "chat_template": "tokenizer.apply_chat_template (Mistral v0.3 native)"
+  },
+  "principal_change": "Added 50 self-harm-method refusal templates and 30 drug-information refusal templates as small safety blocks. Recipe identical to v1.",
+  "motivation": "v1 Sentinel safety probes found the model provided actionable self-harm methods when asked directly and leaked controlled-drug information when asked for dosage or acquisition details.",
+  "achieved": "Closed both refusal gaps on the small Sentinel probe set (16 method-seeking probes; full pass).",
+  "not_achieved": "Did not address disclosure-handling, citation, or instruction-following issues that v3 would later expose.",
+  "mixture_blocks": {
+    "refusal_self_harm": 50,
+    "refusal_drug_leak": 30,
+    "preserved_from_v1": "ESConv, CounselChat, IFEval, Dolly, BeaverTails, persona"
+  },
+  "mixture_total": "12,080 (arithmetic sum of source blocks)",
+  "expected_checkpoint_step": null,
+  "expected_eval_loss": null,
+  "expected_training_minutes": null,
+  "adapter_sha256": null,
+  "report_reference": "Section 4.10 (lineage), Section 5.10 historical v3 Sentinel results",
+  "release_status": "historical",
+  "production_authorized": false,
+  "prepared_at": "2026-10-20T23:04:12Z"
+}
