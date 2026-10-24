@@ -453,6 +453,11 @@
       "sha256": "41b04ab888f1e2db518ce5f7ab0a8f0915f11356424a907f448bfd7968e2119d"
     },
     {
+      "path": "rag_project/scripts/chunker.py",
+      "bytes": 32102,
+      "sha256": "7f8c5c45e01de106e6bed5f6cac313238f9ab6b1b8fd19849717a5cf6192d592"
+    },
+    {
       "path": "rag_project/scripts/retrieval_router.py",
       "bytes": 6558,
       "sha256": "9aef20d4b228a865f8223bf5e958b15760000492a56f214f12ff36d97d284aec"
